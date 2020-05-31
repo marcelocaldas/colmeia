@@ -16,7 +16,7 @@ services:
       - ../compose/local/config.d:/var/www/html/protected/application/conf/config.d
 
       # themes and plugins
-      - ../themes/SampleTheme:/var/www/html/protected/application/themes/SampleTheme
+      - ../themes/MapasComBr:/var/www/html/protected/application/themes/MapasComBr
       - ../plugins/SamplePlugin:/var/www/html/protected/application/plugins/SamplePlugin
 
     environment:

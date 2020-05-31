@@ -1,5 +1,5 @@
 <?php
-namespace SampleTheme;
+namespace MapasComBr;
 
 use MapasCulturais\App;
 

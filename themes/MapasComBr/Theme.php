@@ -26,5 +26,4 @@ class Theme extends \MapasCulturais\Themes\BaseV1\Theme {
 
         // $this->enqueueScript('app', 'hide-fields', 'js/hide-fields.js');
     }
-
 }

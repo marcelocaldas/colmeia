@@ -25,7 +25,7 @@ return [
                     // só pode acessar as demais urls quem tiver controle sobre o agente da SECULT
                     $secult = $app->repo('Agent')->find(env('SECULT_AGENT_ID', 7));
                     if ($secult) {
-                        return !$secult->canUser('@control');
+                        return $secult->canUser('@control');
                     } else {
                         return false;
                     }

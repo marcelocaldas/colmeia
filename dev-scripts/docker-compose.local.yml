@@ -17,7 +17,10 @@ services:
 
       # themes and plugins
       - ../themes/MapasComBr:/var/www/html/protected/application/themes/MapasComBr
+      - ../plugins/AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
+      - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
       - ../plugins/SamplePlugin:/var/www/html/protected/application/plugins/SamplePlugin
+      - ../plugins/AldirBlancRedirects:/var/www/html/protected/application/plugins/AldirBlancRedirects
 
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10

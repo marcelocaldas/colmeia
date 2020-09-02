@@ -44,7 +44,7 @@ services:
       - APP_MODE=production
       - ACTIVE_THEME=MapasComBr
       - PENDING_PCACHE_RECREATION_INTERVAL=60
-
+      
     depends_on:
       - db
       

@@ -29,6 +29,9 @@ class Plugin extends \MapasCulturais\Plugin {
                 }
             }
         });
+        if ( !isset($_SESSION['mapasculturais.auth.redirect_path']) ){
+            $_SESSION['mapasculturais.auth.redirect_path'] = $app->createUrl('aldirblanc', 'cadastro');
+        }
         $app->hook('controller(auth).render(<<*>>)', function() {
             $this->layout = 'aldirblanc';
         }, -1);

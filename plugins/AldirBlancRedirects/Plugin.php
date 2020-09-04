@@ -29,5 +29,8 @@ class Plugin extends \MapasCulturais\Plugin {
                 }
             }
         });
+        $app->hook('controller(auth).render(<<*>>)', function() {
+            $this->layout = 'aldirblanc';
+        }, -1);
     }
 }

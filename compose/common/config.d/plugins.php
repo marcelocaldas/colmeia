@@ -10,7 +10,7 @@ return [
             'namespace' => 'AldirBlanc',
             'config' => [
                 'inciso1_enabled' => true,
-                'inciso2_enabled' => true,
+                'inciso2_enabled' => env('INCISO2_ENABLED', false),
                 'project_id' => 3,
                 'inciso1_opportunity_id' => 9,
                 'inciso2_opportunity_ids' => ['Colares' => 13, "Castanhal" => 14, "São Felix do Xingu" => 15, "Mojuí dos campos" => 16 ],

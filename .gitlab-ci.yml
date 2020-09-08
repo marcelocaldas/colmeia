@@ -31,7 +31,7 @@ deploy to homolog:
   stage: deploy
   image: hacklab/kubectl:latest
   script:
-    - echo ${kube_config-develop} | base64 -d > ${KUBECONFIG}
+    - echo ${kube_config_develop} | base64 -d > ${KUBECONFIG}
     - kubectl -n mapas-br-dev --record deployment.apps/mapas set image deployment.v1.apps/mapas mapas=$HOMOLOG_IMAGE
   only:
     - /master/

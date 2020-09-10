@@ -13,11 +13,7 @@ return [
                 'inciso2_enabled' => env('INCISO2_ENABLED', false),
                 'project_id' => 3,
                 'inciso1_opportunity_id' => 9,
-                'inciso2_opportunity_ids' => [
-                    "Castanhal" => 20, 
-                    "Mojuí dos campos" => 19,
-                    "Belém" => 21,
-                ],
+                'inciso2_opportunity_ids' => (array) json_decode(env('AB_INCISO2_OPPORTUNITIES', '{}')),
                 'msg_inciso2_disabled' => 'Em breve!',
                 'link_suporte' => 'https://tawk.to/chat/5f47c17bcc6a6a5947af53ba/default',
                 'msg_inciso2_disabled' => 'A solicitação deste benefício será lançada em breve. Acompanhe a divulgação pelas instituições responsáveis pela gestão da cultura em seu município!',

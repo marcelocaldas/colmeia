@@ -1,6 +1,6 @@
 # Mapas Culturais Base Project
 
-Este é um projeto base para desenvolvimento de temas e plugins.
+Este é um projeto base para desenvolvimento de temas e plugins. 
 
 ## Estrutura de arquivos
 - **compose**

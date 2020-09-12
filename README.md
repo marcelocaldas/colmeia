@@ -1,5 +1,5 @@
-# Mapas Culturais Base Project
-Este é um projeto base para desenvolvimento de temas e plugins.
+# Mapa da Cultura Brasileira
+Repositório para deploy do Mapa da Cultura Brasileira
 
 ## Estrutura de arquivos
 - **compose**

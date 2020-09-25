@@ -92,7 +92,13 @@ return [
                     {"owner": 5627, "city": "Aveiro"},
                     {"owner": 5628, "city": "Novo Progresso"},
                     {"owner": 5629, "city": "Moju "},
-                    {"owner": 5636, "city": "Alenquer"}
+                    {"owner": 5636, "city": "Alenquer"},
+                    {"owner": 5931, "city": "Belterra"},
+                    {"owner": 5932, "city": "Faro"},
+                    {"owner": 5933, "city": "Primavera"},
+                    {"owner": 5934, "city": "Quatipuru"},
+                    {"owner": 5935, "city": "Rurópolis"},
+                    {"owner": 5936, "city": "Vitória do Xingu"}
                 ]'),
                 'inciso1_opportunity_id' => 9,
                 'inciso2_opportunity_ids' => (array) json_decode(env('AB_INCISO2_OPPORTUNITY_IDS', '{}')),

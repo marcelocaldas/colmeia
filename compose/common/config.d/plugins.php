@@ -98,11 +98,11 @@ return [
                     {"owner": 5933, "city": "Primavera"},
                     {"owner": 5934, "city": "Quatipuru"},
                     {"owner": 5935, "city": "Rurópolis"},
-                    {"owner": 5936, "city": "Vitória do Xingu"}
-                    {"owner": 5636, "city": "Alenquer"}
-                    {"owner": 6284, "city": "Canaã do Carajás"}
-                    {"owner": 6285, "city": "Breves"}
-                    {"owner": 6286, "city": "Cametá"}
+                    {"owner": 5936, "city": "Vitória do Xingu"},
+                    {"owner": 5636, "city": "Alenquer"},
+                    {"owner": 6284, "city": "Canaã do Carajás"},
+                    {"owner": 6285, "city": "Breves"},
+                    {"owner": 6286, "city": "Cametá"},
                     {"owner": 6287, "city": "Tailândia"}
                 ]'),
                 'inciso1_opportunity_id' => 9,

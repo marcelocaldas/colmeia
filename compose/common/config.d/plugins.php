@@ -99,13 +99,18 @@ return [
                     {"owner": 5934, "city": "Quatipuru"},
                     {"owner": 5935, "city": "Rurópolis"},
                     {"owner": 5936, "city": "Vitória do Xingu"}
+                    {"owner": 5636, "city": "Alenquer"}
+                    {"owner": 6284, "city": "Canaã do Carajás"}
+                    {"owner": 6285, "city": "Breves"}
+                    {"owner": 6286, "city": "Cametá"}
+                    {"owner": 6287, "city": "Tailândia"}
                 ]'),
                 'inciso1_opportunity_id' => 9,
                 'inciso2_opportunity_ids' => (array) json_decode(env('AB_INCISO2_OPPORTUNITY_IDS', '{}')),
                 'msg_inciso2_disabled' => 'Em breve!',
                 'link_suporte' => 'https://tawk.to/chat/5f47c17bcc6a6a5947af53ba/default',
                 'msg_inciso2_disabled' => 'A solicitação deste benefício será lançada em breve. Acompanhe a divulgação pelas instituições responsáveis pela gestão da cultura em seu município!',
-
+                 
             ],
         ],
         'AldirBlancRedirects' => [

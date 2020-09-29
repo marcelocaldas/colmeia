@@ -103,7 +103,8 @@ return [
                     {"owner": 6284, "city": "Canaã do Carajás"},
                     {"owner": 6285, "city": "Breves"},
                     {"owner": 6286, "city": "Cametá"},
-                    {"owner": 6287, "city": "Tailândia"}
+                    {"owner": 6287, "city": "Tailândia"},
+                    {"owner": 6452, "city": "Redenção"}
                 ]'),
                 'inciso1_opportunity_id' => 9,
                 'inciso2_opportunity_ids' => (array) json_decode(env('AB_INCISO2_OPPORTUNITY_IDS', '{}')),

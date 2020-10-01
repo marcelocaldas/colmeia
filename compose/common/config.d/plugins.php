@@ -133,9 +133,8 @@ return [
                     $opportunities = $app->repo('Opportunity')->findBy(['id' => $opportunities_ids]);
                     
                     foreach($opportunities as $opportunity) { 
-                        if($opportunity->canUser('@control')) {
+                        if($opportunity->canUser('@control') || $opportunity->canUser('viewEvaluations') || $opportunity->canUser('evaluateRegistrations')) {
                             return true;
-                            $_SESSION['mapasculturais.auth.redirect_path'] = $app->createUrl('panel', 'index');
                         }
                     }
                     return false;

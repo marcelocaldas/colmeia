@@ -135,8 +135,25 @@ return [
 
                     $opportunities = $app->repo('Opportunity')->findBy(['id' => $opportunities_ids]);
                     
-                    foreach($opportunities as $opportunity) { 
+                    $evaluation_method_configurations = [];
+
+                    foreach($opportunities as $opportunity) {
+                        $evaluation_method_configurations[] = $opportunity->evaluationMethodConfiguration;
+                        
                         if($opportunity->canUser('@control') || $opportunity->canUser('viewEvaluations') || $opportunity->canUser('evaluateRegistrations')) {
+                            return true;
+                        }
+                    }
+
+                    foreach ($evaluation_method_configurations as $emc) {
+                        $param = [
+                            'originType' => 'MapasCulturais\Entities\EvaluationMethodConfiguration',
+                            'originId' => $emc->id, 
+                            'destinationType' => 'MapasCulturais\Entities\Agent',
+                            'destinationId' => $app->user->profile->id,
+                        ];
+
+                        if($request = $app->repo('RequestAgentRelation')->findOneBy($param)) {
                             return true;
                         }
                     }

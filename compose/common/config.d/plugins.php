@@ -107,7 +107,7 @@ return [
                     {"owner": 6452, "city": "Redenção"},
                     {"owner": 7012, "city": "Município de Ourilândia do Norte"},
                     {"owner": 7015, "city": "Dom Eliseu"},
-                    {"owner": 7644, "city": "Município Bom Jesus do Tocantins"},
+                    {"owner": 7644, "city": "Município Bom Jesus do Tocantins"}
                 ]'),
                 'inciso1_opportunity_id' => 9,
                 'inciso2_opportunity_ids' => (array) json_decode(env('AB_INCISO2_OPPORTUNITY_IDS', '{}')),

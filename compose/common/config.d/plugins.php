@@ -117,6 +117,10 @@ return [
                  
             ],
         ],
+        'AldirBlancDataprev' => [
+            'namespace' => 'AldirBlancDataprev',
+            'config' => [],
+        ],
         'AldirBlancRedirects' => [
             'namespace' => 'AldirBlancRedirects',
             'config' => [

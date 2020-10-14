@@ -115,6 +115,8 @@ return [
                 'msg_inciso2_disabled' => 'Em breve!',
                 'link_suporte' => 'https://tawk.to/chat/5f47c17bcc6a6a5947af53ba/default',
                 'msg_inciso2_disabled' => 'A solicitação deste benefício será lançada em breve. Acompanhe a divulgação pelas instituições responsáveis pela gestão da cultura em seu município!',
+                'prefix_project' =>  'Lei Aldir Blanc | ' 
+
                  
             ],
         ],

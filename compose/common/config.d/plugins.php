@@ -108,21 +108,14 @@ return [
                     (object) ["owner" => 7012, "city" => "Município de Ourilândia do Norte"],
                     (object) ["owner" => 7015, "city" => "Dom Eliseu"],
                     (object) ["owner" => 7644, "city" => "Município Bom Jesus do Tocantins"],
-                    (object) ["owner" => 7956, "city" => "Santa Barbara do Pará"],
                 ],
                 'inciso1_opportunity_id' => 9,
                 'inciso2_opportunity_ids' => (array) json_decode(env('AB_INCISO2_OPPORTUNITY_IDS', '{}')),
                 'msg_inciso2_disabled' => 'Em breve!',
                 'link_suporte' => 'https://tawk.to/chat/5f47c17bcc6a6a5947af53ba/default',
                 'msg_inciso2_disabled' => 'A solicitação deste benefício será lançada em breve. Acompanhe a divulgação pelas instituições responsáveis pela gestão da cultura em seu município!',
-                'prefix_project' =>  'Lei Aldir Blanc | ' 
-
                  
             ],
-        ],
-        'AldirBlancDataprev' => [
-            'namespace' => 'AldirBlancDataprev',
-            'config' => [],
         ],
         'AldirBlancRedirects' => [
             'namespace' => 'AldirBlancRedirects',

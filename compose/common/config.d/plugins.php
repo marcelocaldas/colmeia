@@ -108,6 +108,7 @@ return [
                     (object) ["owner" => 7012, "city" => "Município de Ourilândia do Norte"],
                     (object) ["owner" => 7015, "city" => "Dom Eliseu"],
                     (object) ["owner" => 7644, "city" => "Município Bom Jesus do Tocantins"],
+                    (object) ["owner" => 7956, "city" => "Santa Barbara do Pará"],
                 ],
                 'inciso1_opportunity_id' => 9,
                 'inciso2_opportunity_ids' => (array) json_decode(env('AB_INCISO2_OPPORTUNITY_IDS', '{}')),

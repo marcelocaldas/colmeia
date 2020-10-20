@@ -131,8 +131,8 @@ return [
             ]
         ],
 
-        'AldirBlancGenerico' => [
-            'namespace' => 'AldirBlancGenerico',
+        'Generico' => [
+            'namespace' => 'AldirBlancValidador',
             'config' => [
                 'exportador_requer_validacao' => ['dataprev'],
                 'exportador_requer_homologacao' => true,

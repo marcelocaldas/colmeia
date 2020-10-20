@@ -131,11 +131,11 @@ return [
             ]
         ],
 
-        'Generico' => [
+        'AldirBlancGenerico' => [
             'namespace' => 'AldirBlancGenerico',
             'config' => [
-                'exportador_requer_homologacao' => true,
                 'exportador_requer_validacao' => ['dataprev'],
+                'exportador_requer_homologacao' => true,
                 'consolidacao_requer_homologacao' => true,
                 'consolidacao_requer_validacoes' => ['dataprev', 'financeiro']
 

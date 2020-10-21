@@ -117,7 +117,7 @@ return [
                 'msg_inciso2_disabled' => 'A solicitação deste benefício será lançada em breve. Acompanhe a divulgação pelas instituições responsáveis pela gestão da cultura em seu município!',
                 'prefix_project' =>  'Lei Aldir Blanc | ',
                 'mediados_owner' => 7036,
-                'homolog_requer_validacao' => ['dataprev'],
+                'homologacao_requer_validacao' => ['dataprev'],
             ],
         ],
 
@@ -136,9 +136,20 @@ return [
                 'exportador_requer_validacao' => ['dataprev'],
                 'exportador_requer_homologacao' => true,
                 'consolidacao_requer_homologacao' => true,
-                'consolidacao_requer_validacoes' => ['dataprev', 'financeiro']
+                'consolidacao_requer_validacoes' => ['dataprev', 'financeiro'],
+                'inciso1' => [
+                    'CPF' => 104,
+                    'gênero' => 117,
+                    'sexo' => 121,
+                    'comunidade tradicional' => 105,
+                    'área de atuação' => 123,
+                    'banco' => 111,
+                    'tipo de conta' => 8131,
+                    'agência' => 112,
+                    'num. conta' => 113
+                ],
 
-            ]
+            ],
         ]
     ]
 ];

@@ -99,7 +99,6 @@ return [
                     (object) ["owner" => 1, "city" => "Quatipuru"],
                     (object) ["owner" => 1, "city" => "Rurópolis"],
                     (object) ["owner" => 1, "city" => "Vitória do Xingu"],
-                    (object) ["owner" => 1, "city" => "Alenquer"],
                     (object) ["owner" => 1, "city" => "Canaã do Carajás"],
                     (object) ["owner" => 1, "city" => "Breves"],
                     (object) ["owner" => 1, "city" => "Cametá"],

@@ -38,6 +38,8 @@ services:
       - DB_USER=mapas
       - DB_PASS=mapas
       - DB_NAME=mapas
+      - CACHE_API=false
+
 
 #      - APP_LCODE=pt_BR,es_ES # para selecao do idioma baseado no navegador
       - APP_LCODE=pt_BR

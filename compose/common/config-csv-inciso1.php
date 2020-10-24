@@ -24,13 +24,37 @@ return [
         "status" => '1'
     ],
     'atuacoes-culturais' => [ // Opções para área de atuações culturais
-        'artes-cenicas' => [],
-        'audiovisual' => [],
-        'musica' => [],
-        'artes-visuais' => [],
-        'patrimonio-cultural' => [],
-        'museu-memoria' => [],
-        'humanidades' => [],
+        'artes-cenicas' => [
+            'Artes Circenses',
+            'Dança',
+            'Teatro',
+            'Ópera',
+        ],
+        'artes-visuais' => [
+            'Artes Visuais',
+            'Artesanato',
+            'Design',
+            'Fotografia',
+            'Moda',
+        ],
+        'audiovisual' => [
+            'Audiovisual',
+        ],
+        'humanidades' => [
+            'Literatura',
+        ],
+        'museu-memoria' => [
+            'Museu',
+        ],
+        'musica' => [
+            'Música',
+        ],
+        'patrimonio-cultural' => [
+            'Cultura Popular',
+            'Gastronomia',
+            'Outros',
+            'Patrimônio Cultural',
+        ],    
     ],
     'herder_layout' => [ // Header padronizado segundo instruções do documento dataprev
         'REQUERENTE_CPF',

@@ -150,6 +150,17 @@ return [
                 ],
 
             ],
-        ]
+        ],
+
+        'RegistrationPayments' => [ 'namespace' => 'RegistrationPayments' ],
+        
+        'Financeiro' => [
+            'namespace' => 'AldirBlancValidadorFinanceiro',
+            'config' => [
+                'exportador_requer_validacao' => ['dataprev'],
+                'consolidacao_requer_homologacao' => false,
+                'consolidacao_requer_validacoes' => []
+            ],
+        ],
     ]
 ];

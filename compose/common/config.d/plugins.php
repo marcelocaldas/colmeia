@@ -118,6 +118,12 @@ return [
                 'prefix_project' =>  'Lei Aldir Blanc | ',
                 'mediados_owner' => 7036,
                 'homologacao_requer_validacao' => ['dataprev'],
+                'lista_mediadores' => [
+                    'mediador1@hacklab.com.br'=> [9],
+                    'mediador3cidade@hacklab.com.br' => [12,13,14],
+                    'mediador1cidade@hacklab.com.br' => [15],
+                    'mediatudo@hacklab.com.br' => [],
+                ],
             ],
         ],
 

@@ -1,7 +1,24 @@
 <?php 
 use MapasCulturais\i;
 
+if (env('REDIS_CACHE', false)) {
+    $redis = new \Redis();
+    $redis->connect('redis');
+    $cache = new \Doctrine\Common\Cache\RedisCache;
+    $cache->setRedis($redis);
+    
+    $redis = new \Redis();
+    $redis->connect('redis');
+    $mscache = new \Doctrine\Common\Cache\RedisCache;
+    $mscache->setRedis($redis);
+} else {
+    $cache = new \Doctrine\Common\Cache\ApcuCache;
+    $mscache = new \Doctrine\Common\Cache\ApcuCache;
+}
+
 return [
+    'app.cache' => $cache,
+    'app.mscache' => $mscache,
     'app.siteName' => env('SITE_NAME', 'Mapa da Cultura Brasileira'),
     'app.siteDescription' => i::__("O Mapas Culturais é uma plataforma colaborativa que reúne informações sobre agentes, espaços, eventos, projetos culturais e oportunidades"),
 

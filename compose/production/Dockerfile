@@ -9,6 +9,7 @@ COPY plugins /var/www/html/protected/application/plugins
 
 COPY compose/common/config-csv-inciso1.php /var/www/html/protected/application/plugins/AldirBlancDataprev/config-csv-inciso1.php
 COPY compose/common/config-csv-inciso2.php /var/www/html/protected/application/plugins/AldirBlancDataprev/config-csv-inciso2.php
+COPY compose/common/config-ppg10x.php /var/www/html/protected/application/plugins/AldirBlancDataprev/config-ppg10x.php
 
 COPY compose/common/php-ini.d /usr/local/etc/php/conf.d
 

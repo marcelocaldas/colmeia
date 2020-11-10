@@ -25,6 +25,7 @@
  */
 return [
     "fieldMap" => [
+        "ppg100Serial" => 1,
         "wantsPaymentOrder" => "field_8564",
         "singleParent" => "field_119",
 		"numeroProtocolo" => "id",

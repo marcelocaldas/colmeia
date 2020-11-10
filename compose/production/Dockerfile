@@ -9,7 +9,7 @@ COPY plugins /var/www/html/protected/application/plugins
 
 COPY compose/common/config-csv-inciso1.php /var/www/html/protected/application/plugins/AldirBlancDataprev/config-csv-inciso1.php
 COPY compose/common/config-csv-inciso2.php /var/www/html/protected/application/plugins/AldirBlancDataprev/config-csv-inciso2.php
-COPY compose/common/config-ppg10x.php /var/www/html/protected/application/plugins/AldirBlancDataprev/config-ppg10x.php
+COPY compose/common/config-ppg10x.php /var/www/html/protected/application/plugins/AldirBlanc/config-ppg10x.php
 COPY compose/common/config-cnab240-inciso1.php /var/www/html/protected/application/plugins/AldirBlanc/config-cnab240-inciso1.php
 COPY compose/common/config-cnab240-inciso2.php /var/www/html/protected/application/plugins/AldirBlanc/config-cnab240-inciso2.php
 COPY compose/common/deParaContas.csv /var/www/html/protected/application/plugins/AldirBlanc/deParaContas.csv

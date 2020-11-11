@@ -146,7 +146,7 @@ return [
                 // mensagens de status padrao
                 'msg_status_sent' => env('AB_STATUS_SENT_MESSAGE', 'Consulte novamente em outro momento.'), // STATUS_SENT = 1
                 'msg_status_invalid' => env('AB_STATUS_INVALID_MESSAGE', 'Sua inscrição foi invalidada pelo Dataprev.'), // STATUS_INVALID = 2
-                'msg_status_approved' => env('AB_STATUS_APPROVED_MESSAGE', 'Sua inscrição foi validada pelo Dataprev, homologada pela Secult e enviado para pagamento pelo Banco do Brasil.'), // STATUS_APPROVED = 10
+                'msg_status_approved' => env('AB_STATUS_APPROVED_MESSAGE', 'Sua inscrição foi validada pelo Dataprev, homologada pela Secult.'), // STATUS_APPROVED = 10
                 'msg_status_notapproved' => env('AB_STATUS_NOTAPPROVED_MESSAGE', 'Sua inscrição foi validada pelo Dataprev, mas não homologada pela Secult por pendência de documentos.'), // STATUS_NOTAPPROVED = 3
                 'msg_status_waitlist' => env('AB_STATUS_WAITLIST_MESSAGE', 'Os recursos disponibilizados já foram destinados. Para sua solicitação ser aprovada será necessário aguardar possível liberação de recursos. Em caso de aprovação, você também será notificado por e-mail. Consulte novamente em outro momento.'), //STATUS_WAITLIST = 8
 

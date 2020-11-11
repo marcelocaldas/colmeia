@@ -53,7 +53,7 @@ return [
         ],
         'INSCRICAO_TIPO' => [ // CPF ou CNPJ da entidade pagadora (1 = CPF ou 2 = CNPJ) deve ser perguntado ao banco
             'length' => 1,
-            'default' => 2,
+            'default' => '2',
             'field_id' => null,
             'type' => 'int',
         ],
@@ -448,7 +448,7 @@ return [
         'BEN_NOME' => [
             'length' => 30,
             'default' => null,
-            'field_id' => 'field_22',
+            'field_id' => 'field_109',
             'type' => 'string',
         ],
         'BEN_DOC_ATRIB_EMPRESA_82' => [

@@ -111,6 +111,8 @@ return [
                     (object) ["owner" => 8997, "city" => "Jacunda"],
                     (object) ["owner" => 13480, "city" => "Oriximiná"],
                     (object) ["owner" => 13481, "city" => "Itaituba"],
+                    (object) ["owner" => 15172, "city" => " Parauapebas "],
+                    (object) ["owner" => 15173, "city" => " Prainha "],
 
                 ],
                 'inciso1_opportunity_id' => 9,

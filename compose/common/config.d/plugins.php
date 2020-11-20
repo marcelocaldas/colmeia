@@ -182,6 +182,11 @@ return [
                 'email_recurso' => env('AB_EMAIL_RECURSO', 'suportemapaculturalpa@gmail.com'),
                 'msg_recurso' => env('AB_MENSAGEM_RECURSO', 'Você pode entrar com recurso em até 5 dias úteis, enviando os documentos pendentes exclusivamente para o e-mail suportemapaculturalpa@gmail.com com o assunto: Recurso - pa-00000000 (número da sua inscrição).'),
 
+                // mensagem para reprocessamento do Dataprev, para ignorar a mensagem retornada pelo Dataprev e exibir a mensagem abaixo
+                'msg_reprocessamento_dataprev' => env('AB_MENSAGEM_REPROCESSAMENTO_DATAPREV', 'Seu status foi alterado de Selecionado(a) para Não Selecionado(a). Isso aconteceu por erro da DataPrev, sistema disponibilizado pelo Governo Federal para cruzamento de dados dos CPF´s, que averigua se solicitantes do auxílio emergencial cumprem os critérios previstos na Lei 14.017/2020.<br><br> 
+De acordo com o sistema, seu CPF foi identificado como "titular de benefício previdenciário ou assistencial; ou beneficiário do seguro desemprego; ou contemplado com benefício emergencial".<br><br> 
+A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possível homologar o acesso ao auxílio sem a validação da DataPrev.'),
+
             ],
         ],
 

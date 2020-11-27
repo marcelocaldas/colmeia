@@ -199,26 +199,35 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
             ]
         ],
 
-        'Generico' => [
+        'SECULT' => [
             'namespace' => 'AldirBlancValidador',
             'config' => [
-                'exportador_requer_validacao' => ['dataprev'],
-                'exportador_requer_homologacao' => true,
-                'consolidacao_requer_homologacao' => true,
-                'consolidacao_requer_validacoes' => ['dataprev', 'financeiro'],
-                'inciso1' => [
-                    'CPF' => 104,
-                    'gênero' => 117,
-                    'sexo' => 121,
-                    'comunidade tradicional' => 105,
-                    'área de atuação' => 123,
-                    'banco' => 111,
-                    'tipo de conta' => 8131,
-                    'agência' => 112,
-                    'num. conta' => 113
-                ],
+                // slug utilizado como id do controller e identificador do validador
+                'slug' => 'secult',
 
-            ],
+                // nome apresentado na interface
+                'name' => 'SECULT',
+
+                'forcar_resultado' => true,
+
+                'consolidacao_requer_homologacao' => false,
+
+                // indica que só deve exportar as inscrições já homologadas
+                'exportador_requer_homologacao' => true,
+
+                // indica que a exportação não requer nenhuma validação
+                'exportador_requer_validacao' => [],
+
+                // indica que só deve consolidar o resultado se a inscrição
+                // já tiver sido processada pelo Dataprev
+                'consolidacao_requer_validacoes' => [],
+
+                'inciso1' => [
+                    'AVALIACAO' => function ($registration, $key) {
+                        return $registration->consolidatedResult;
+                    }
+                ],
+            ]
         ],
 
         'RegistrationPayments' => [ 'namespace' => 'RegistrationPayments' ],

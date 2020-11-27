@@ -409,5 +409,5 @@ return [
         'IN_SICAB',
         'IN_SALIC'
     ],
-    'RegisterNumber' => 'IDENTIF_CAD_MUNIC_CULT' //Define qual será o campo utilizado para recuperar o número da inscrição na importação de dados
+    'RegisterNumber' => $_GET['IDENTIF_CAD_ESTAD_CULT'] ? 'IDENTIF_CAD_ESTAD_CULT' : 'IDENTIF_CAD_MUNIC_CULT' //Define qual será o campo utilizado para recuperar o número da inscrição na importação de dados
 ];

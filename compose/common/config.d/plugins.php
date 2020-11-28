@@ -158,6 +158,10 @@ return [
                     'rafapeniche@hotmail.com' => [ ],
                     'adson.alfa@gmail.com' => [ ],
                     'pauloricardo.pr573@gmail.com' => [ ],
+                    'francineliadepaula@gmail.com' => [ ],
+                    'marcelo.arapucu@gmail.com' => [ ],
+                    'jonasmkw@hotmail.com' => [ ],
+                    'karomunduruku@gmail.com' => [ ],
 
                 ],
 

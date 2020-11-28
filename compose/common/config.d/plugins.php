@@ -122,6 +122,7 @@ return [
                 'msg_inciso2_disabled' => 'A solicitação deste benefício será lançada em breve. Acompanhe a divulgação pelas instituições responsáveis pela gestão da cultura em seu município!',
                 'prefix_project' =>  'Lei Aldir Blanc | ',
                 'mediados_owner' => 7036,
+                'mediadores_prolongar_tempo' => true,
                 'homologacao_requer_validacao' => ['dataprev'],
                 'lista_mediadores' => [
                     'mediador1@hacklab.com.br'=> [9],

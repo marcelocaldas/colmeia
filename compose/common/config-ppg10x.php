@@ -3,6 +3,8 @@
 /**
  * Configuração do exportador do PPG100
  *
+ * ppg100Serial: temporariamente usado para trocar o número seqüencial do
+ *               arquivo PPG100
  * fieldMap: usado para localizar os diversos campos na oportunidade
  * header: configuração do header; lista seqüencial de campos com length, type e
  *         name, mais default se for um campo constante ou function para um
@@ -24,21 +26,23 @@
  * ToDo: documentar assinaturas para esses métodos.
  */
 return [
+    "serial" => 0,
+    "idMap" => "CSV/ppgIdMap.csv", // comentar a linha para mapear pelo id do pagamento
     "fieldMap" => [
-        "ppg100Serial" => 1,
         "wantsPaymentOrder" => "field_8564",
         "singleParent" => "field_119",
-		"numeroProtocolo" => "id",
-		"senhaSaque" => "number",
+        //"numeroProtocolo" => "id",
+        "senhaSaque" => "number",
         "cpf" => "field_104",
+        "indicadorAcao" => "id",
     ],
     "header" => [
-		[
-			"length" => 1,
-			"type" => "int",
-			"name" => "tipoRegistro",
-			"default" => 0,
-		],
+        [
+            "length" => 1,
+            "type" => "int",
+            "name" => "tipoRegistro",
+            "default" => 0,
+        ],
         [
             "length" => 8,
             "type" => "int",
@@ -81,12 +85,12 @@ return [
             "name" => "sequencialRemessa",
             "function" => "sequenceNumber",
         ],
-		[
-			"length" => 9,
-			"type" => "text",
-			"name" => "padding",
-			"default" => "",
-		],
+        [
+            "length" => 9,
+            "type" => "text",
+            "name" => "padding",
+            "default" => "",
+        ],
         [
             "length" => 4,
             "type" => "int",
@@ -97,96 +101,102 @@ return [
             "length" => 9,
             "type" => "int",
             "name" => "contaDebito",
-            "default" => 129690, // preenchimento SECULT
+            "default" => 12969, // preenchimento SECULT
         ],
-		[
-			"length" => 120,
-			"type" => "text",
-			"name" => "padding",
-			"default" => "",
-		],
-		[
-			"length" => 9,
-			"type" => "int",
-			"name" => "numeroRegistro",
-			"default" => 1,
-		],
+        [
+            "length" => 120,
+            "type" => "text",
+            "name" => "padding",
+            "default" => "",
+        ],
+        [
+            "length" => 9,
+            "type" => "int",
+            "name" => "numeroRegistro",
+            "default" => 1,
+        ],
     ],
     "details" => [
         [
             "fields" => [
-				[
-					"length" => 1,
-					"type" => "int",
-					"name" => "tipoRegistro",
-					"default" => 1,
-				],
-				[
-					"length" => 15,
-					"type" => "meta",
-					"name" => "numeroProtocolo",
+                [
+                    "length" => 1,
+                    "type" => "int",
+                    "name" => "tipoRegistro",
+                    "default" => 1,
+                ],
+                [
+                    "length" => 15,
+                    "type" => "meta",
+                    "name" => "numeroProtocolo", // enviar CSV no extraData
                     "fields" => [
+                        [ // apenas no novo formato
+                            "length" => 6,
+                            "type" => "int",
+                            "name" => "padding",
+                            "default" => 0,
+                        ],
                         [
-                            "length" => 4,
+                            "length" => 3, // 3 no novo formato, 4 no antigo
                             "type" => "int",
                             "name" => "idBB",
                             "default" => 26, // preenchimento SECULT
                         ],
                         [
-                            "length" => 10,
+                            "length" => 6, // 6 no novo formato, 10 no antigo
                             "type" => "int",
                             "name" => "idCliente",
                         ],
-                        [
-                            "length" => 1,
-                            "type" => "int",
-                            "name" => "dv",
-						],
-					],
-					"function" => "ppg100ProtocolNumberPA",
-				],
-				[
+                        // [ // apenas no antigo formato
+                        //     "length" => 1,
+                        //     "type" => "int",
+                        //     "name" => "dv",
+                        // ],
+                    ],
+                    //"function" => "ppg100ProtocolNumberPA",
+                ],
+                [
                     "length" => 6,
                     "type" => "int",
-					"name" => "senhaSaque",
-					"function" => "ppg100PIN",
+                    "name" => "senhaSaque",
+                    "function" => "ppg100PIN",
                 ],
-				[
-					"length" => 10,
-					"type" => "text",
-					"name" => "padding",
-					"default" => "",
-				],
+                [
+                    "length" => 10,
+                    "type" => "text",
+                    "name" => "padding",
+                    "default" => "",
+                ],
                 [
                     "length" => 11,
                     "type" => "int",
                     "name" => "cpf",
                 ],
-				[
-					"length" => 11,
-					"type" => "int",
-					"name" => "valorCarga",
-				],
+                [
+                    "length" => 11,
+                    "type" => "int",
+                    "name" => "valorCarga",
+                ],
                 [
                     "length" => 1,
                     "type" => "int",
                     "name" => "indicadorAcao",
-                    "default" => 3, // sempre apenas carga
+                    "function" => "ppg100ActionPA",
                 ],
-				[
-					"length" => 136,
-					"type" => "text",
-					"name" => "padding",
-					"default" => "",
-				],
-				[
-					"length" => 9,
-					"type" => "int",
-					"name" => "numeroRegistro",
-				],
+                [
+                    "length" => 136,
+                    "type" => "text",
+                    "name" => "padding",
+                    "default" => "",
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "numeroRegistro",
+                ],
             ],
         ],
-	],
+    ],
     "trailer" => [
         [
             "length" => 1,
@@ -230,10 +240,201 @@ return [
                     ["const" => "Ordem de pagamento"],
                 ],
             ],
-            [
-                "operator" => "equals",
-                "operands" => ["singleParent", ["const" => "NÃO"]]
-            ]
+            // [
+            //     "operator" => "equals",
+            //     "operands" => ["singleParent", ["const" => "NÃO"]]
+            // ],
         ],
+    ],
+    "return" => [
+        "topLevel" => [
+            [
+                "length" => 1,
+                "type" => "int",
+                "name" => "tipoRegistro",
+                "map" => "records",
+            ],
+            [
+                "length" => 190,
+                "type" => "text",
+                "name" => "data",
+            ],
+            [
+                "length" => 9,
+                "type" => "int",
+                "name" => "numeroRegistro",
+            ],
+        ],
+        "records" => [
+            "0" => [ // header
+                [
+                    "length" => 1,
+                    "type" => "int",
+                    "name" => "tipoRegistro",
+                    "match" => 0,
+                ],
+                [
+                    "length" => 8,
+                    "type" => "int",
+                    "name" => "dataRemessa",
+                ],
+                [
+                    "length" => 4,
+                    "type" => "int",
+                    "name" => "horaRemessa",
+                ],
+                [
+                    "length" => 6,
+                    "type" => "text",
+                    "name" => "nomeArquivo",
+                    "match" => "PPG101",
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "mciCliente",
+                    "match" => 300761608, // preenchimento SECULT
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "codigoParametroCliente",
+                    "match" => 26, // preenchimento SECULT
+                ],
+                [
+                    "length" => 3,
+                    "type" => "int",
+                    "name" => "versaoLayout",
+                    "match" => 11,
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "sequencialRemessa",
+                    "field" => "sequenceNumber",
+                ],
+                [
+                    "length" => 4,
+                    "type" => "int",
+                    "name" => "agenciaDebito",
+                    "match" => 1674, // preenchimento SECULT
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "contaDebito",
+                    "match" => 12969, // preenchimento SECULT
+                ],
+                [
+                    "length" => 5,
+                    "type" => "int",
+                    "name" => "codigoRecusa",
+                    "capture" => "fileResultCode",
+                ],
+                [
+                    "length" => 40,
+                    "type" => "text",
+                    "name" => "textoRecusa",
+                    "capture" => "fileResultMessage",
+                ],
+                [
+                    "length" => 84,
+                    "type" => "text",
+                    "name" => "padding",
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "numeroRegistro",
+                    "match" => 1,
+                ],
+            ],
+            "1" => [ // detail
+                [
+                    "length" => 1,
+                    "type" => "int",
+                    "name" => "tipoRegistro",
+                    "match" => 1,
+                ],
+                [ // apenas no novo formato
+                    "length" => 6,
+                    "type" => "int",
+                    "name" => "padding",
+                    "default" => 0,
+                ],
+                [
+                    "length" => 3, // 3 no novo formato, 4 no antigo
+                    "type" => "int",
+                    "name" => "idBB",
+                    "match" => 26, // preenchimento SECULT
+                ],
+                [
+                    "length" => 6, // 6 no novo formato, 10 no antigo
+                    "type" => "int",
+                    "name" => "idCliente",
+                    "capture" => "reference",
+                ],
+                // [ // apenas no antigo formato
+                //     "length" => 1,
+                //     "type" => "int",
+                //     "name" => "dv",
+                // ],
+                [
+                    "length" => 5,
+                    "type" => "int",
+                    "name" => "codigoRecusa",
+                    "capture" => "paymentCode",
+                ],
+                [
+                    "length" => 40,
+                    "type" => "text",
+                    "name" => "textoRecusa",
+                    "capture" => "paymentMessage",
+                ],
+                [
+                    "length" => 130,
+                    "type" => "text",
+                    "name" => "padding",
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "numeroRegistro",
+                ],
+            ],
+            "9" => [ // trailer
+                [
+                    "length" => 1,
+                    "type" => "int",
+                    "name" => "tipoRegistro",
+                    "match" => 9,
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "totalAceitos",
+                    "capture" => "countAccepted",
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "totalRejeitados",
+                    "capture" => "countRejected",
+                ],
+                [
+                    "length" => 172,
+                    "type" => "text",
+                    "name" => "padding",
+                ],
+                [
+                    "length" => 9,
+                    "type" => "int",
+                    "name" => "numeroRegistro",
+                ],
+            ],
+        ],
+    ],
+    "followup" => [
+        "topLevel" => [],
     ],
 ];

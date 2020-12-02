@@ -130,7 +130,6 @@ return [
                     'mediador1cidade@hacklab.com.br' => [15],
                     'mediatudo@hacklab.com.br' => [],
                     'carlos.savr@hotmail.com' => [ ],
-                    'muruesurui@hotmail.com' => [ ],
                     'mayanelimmaa@gmail.com' => [ ],
                     'jheyciellenaira@gmail.com' => [ ],
                     'ana.modesto@unifesspa.edu.br' => [ ],
@@ -158,6 +157,10 @@ return [
                     'marcelo.arapucu@gmail.com' => [ ],
                     'jonasmkw@hotmail.com' => [ ],
                     'karomunduruku@gmail.com' => [ ],
+                    'birasompre@gmail.com' => [ ],
+                    'lara.vaz1999@gmail.com' =>  [ ],
+                    'jessicasilvanascim@gmail.com' => [ ],
+                    'renatakvilhena21@gmail.com' => [ ],
 
                 ],
 

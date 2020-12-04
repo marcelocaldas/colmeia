@@ -163,7 +163,14 @@ return [
                     'renatakvilhena21@gmail.com' => [ ],
 
                 ],
-
+                // configs email ppg
+                
+                'msg_ppg_email' => env('AB_MENSAGEM_PPG_EMAIL', 'O pagamento da primeira parcela (R$ 1.000,00) do benefício está disponível para saque em qualquer caixa eletrônico do Banco do Brasil ou 24horas. Para realizar o saque, você precisa do número de protocolo e senha abaixo.<br><br> No caixa eletrônico, selecione no menu “opções sem cartão”, na sequência escolha “Saques” e depois “Benefícios Emergenciais”. Para finalizar, informe o número do protocolo e a senha. <br><br> É importante que você saque o valor completo disponível, pois só após este saque poderemos disponibilizar as próximas parcelas. <br><br> Assim que realizar o saque, entre em contato com nosso suporte no email <a href="mailto:suportemapaculturalpa@gmail.com" target="_blank"> suportemapaculturalpa@gmail.com</a> e informe que o saque foi realizado com sucesso para que possamos liberar a próxima parcela.'),
+                'msg_ppg_status_pre' => env('AB_MENSAGEM_PPG_STATUS_PRE', 'O pagamento da primeira parcela do seu benefício está disponível para saque. Enviamos o número de protocolo, senha e orientações para o saque para o email '),
+                'msg_ppg_status_pos' => env('AB_MENSAGEM_PPG_STATUS_POS', 'O assunto do email enviado é “[Lei Aldir Blanc] Pagamento do benefício”. Se não encontrá-lo na caixa de entrada, faça uma busca por este assunto para ver se ele não foi para outras caixas.'),
+                'exibir_msg_ppg' => env('AB_MENSAGEM_PPG_STATUS_EXIBIR', true), 
+                
+                
                 // define os ids para dataprev e avaliadores genericos
                 'avaliadores_dataprev_user_id' => (array) json_decode(env('AB_AVALIADORES_DATAPREV_USER_ID', '["9757"]')),
                 'avaliadores_genericos_user_id' => (array) json_decode(env('AB_AVALIADORES_GENERICOS_USER_ID', '["11283", "9758"]')),

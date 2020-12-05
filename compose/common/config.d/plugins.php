@@ -167,9 +167,8 @@ return [
                     'crocha027@gmail.com' => [ ],
                     'paulinhaxingu2@bol.com.br' => [ ],
                     'janabrasan@gmail.com' => [ ],
-                    'anapaulamp88@gmail.com ' => [ ],
+                    'anapaulamp88@gmail.com' => [ ],
                     'albert.louzada@gmail.com' => [ ],
-
                 ],
                 // configs email ppg
                 

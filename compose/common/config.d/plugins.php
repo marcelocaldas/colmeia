@@ -139,6 +139,7 @@ return [
                     'paulamenezes002016@gmail.com' => [ ],
                     'wesleysales.dearaujo@gmail.com' => [ ],
                     'Rayssakallil@gmail.com ' => [ ],
+                    'rayssakallil@gmail.com ' => [ ],
                     'iarafeitosa360@gmail.com' => [ ],
                     'ramosnatan7@gmail.com' => [ ],
                     'elenjaqueline2009@hotmail.com' => [ ],

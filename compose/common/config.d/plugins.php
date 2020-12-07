@@ -170,6 +170,13 @@ return [
                     'janabrasan@gmail.com' => [ ],
                     'anapaulamp88@gmail.com' => [ ],
                     'albert.louzada@gmail.com' => [ ],
+                    'ajessicamiranda@outlook.com.br' => [ ],
+                    'thaiscosta126@gmail.com' => [ ],
+                    'btomchinsky@hotmail.com' => [ ],
+                    'crisvieira_cunha@hotmail.com' => [ ],
+                    'rosanifernandes2@gmail.com' => [ ],
+                    'marcelobl90@gmail.com' => [ ],
+                    'adryansousa013@gmail.com' => [ ],
                 ],
                 // configs email ppg
                 

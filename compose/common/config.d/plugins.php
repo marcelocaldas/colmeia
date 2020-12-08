@@ -170,7 +170,7 @@ return [
                     'janabrasan@gmail.com' => [ ],
                     'anapaulamp88@gmail.com' => [ ],
                     'albert.louzada@gmail.com' => [ ],
-                    'ajessicamiranda@outlook.com.br' => [ ],
+                    'ajessicamiranda@outlook.com' => [ ],
                     'thaiscosta126@gmail.com' => [ ],
                     'btomchinsky@hotmail.com' => [ ],
                     'crisvieira_cunha@hotmail.com' => [ ],

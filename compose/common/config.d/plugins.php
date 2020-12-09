@@ -177,6 +177,7 @@ return [
                     'rosanifernandes2@gmail.com' => [ ],
                     'marcelobl90@gmail.com' => [ ],
                     'adryansousa013@gmail.com' => [ ],
+                    'jptajapuru@gmail.com' => [ ],
                 ],
                 // configs email ppg
                 

@@ -9,6 +9,90 @@ return [
         'AldirBlanc' => [
             'namespace' => 'AldirBlanc',
             'config' => [
+
+                'dias_para_recurso' => env('AB_DIAS_PARA_RECURSO', 6),
+                'de_para_avaliacoes' => [
+
+                    'auto declara' => 'Sua solicitação não foi aprovada porque a autodeclaração enviada na sua inscrição está incorreta, mas você pode entrar com recurso para a atualização da autodeclaração e recebimento do auxílio emergencial da cultura! 
+                    <br><br>
+                    Para isso, siga os passos abaixo:
+                    <br><br>
+                    PASSO 01: Faça o download do modelo de autodeclaração por este link: https://mapacultural.pa.gov.br/files/registrationfileconfiguration/10/modelo_autodeclaracao.docx
+                    <br><br>
+                    PASSO 02: Imprima, preencha com suas informações e assine 
+                    <br><br>
+                    PASSO 03: Tire uma fotografia desta autodeclaração preenchida e assinada. Lembre-se de que a fotografia precisa mostrar todo o documento e ter uma boa visualização das informações 
+                    <br><br>
+                    PASSO 04: Pedido de Recurso
+                    <br><br>
+                    Após seguir os passos 01, 02 e 03, escreva um e-mail com as seguintes informações 
+                    <br><br>
+                    > Endereço de e-mail: suportemapaculturalpa@gmail.com <br>
+                    > Assunto: Lei Aldir Blanc: Pedido de recurso - número de inscrição (coloque o número de sua inscrição que está na plataforma Mapas Culturais) <br>
+                    > Anexe a autodeclaração <br>
+                    > Escreva no e-mail: <br> <br>
+                    Eu, Seu nome, Seu CPF, solicito a revisão do resultado de minha solicitação do Auxílio Emergencial da Cultura, a partir da atualização da minha autodeclaração conforme documento anexado.
+                    ', // Mensagem pela query '%auto declara%' para quem não foi aprovado por autodeclaração com erro
+
+                    'autodeclara' => 'Sua solicitação não foi aprovada porque a autodeclaração enviada na sua inscrição está incorreta, mas você pode entrar com recurso para a atualização da autodeclaração e recebimento do auxílio emergencial da cultura! 
+                    <br><br>
+                    Para isso, siga os passos abaixo:
+                    <br><br>
+                    PASSO 01: Faça o download do modelo de autodeclaração por este link
+                    <br><br>
+                    PASSO 02: Imprima, preencha com suas informações e assine 
+                    <br><br>
+                    PASSO 03: Tire uma fotografia desta autodeclaração preenchida e assinada. Lembre-se de que a fotografia precisa mostrar todo o documento e ter uma boa visualização das informações 
+                    <br><br>
+                    PASSO 04: Pedido de Recurso
+                    <br><br>
+                    Após seguir os passos 01, 02 e 03, escreva um e-mail com as seguintes informações 
+                    <br><br>
+                    > Endereço de e-mail: suportemapaculturalpa@gmail.com <br>
+                    > Assunto: Lei Aldir Blanc: Pedido de recurso - número de inscrição (coloque o número de sua inscrição que está na plataforma Mapas Culturais) <br>
+                    > Anexe a autodeclaração <br>
+                    > Escreva no e-mail: <br>
+                    Eu, Seu nome, Seu CPF, solicito a revisão do resultado de minha solicitação do Auxílio Emergencial da Cultura, a partir da atualização da minha autodeclaração conforme documento anexado.
+                    ', // Mensagem pela query '%autodeclara%' para quem não foi aprovado por autodeclaração com erro
+
+                    'Inciso VII' => 'Segundo a DataPrev, você já recebe o Auxílio Emergencial e, por isso, não pode receber o Auxílio Emergencial da Cultura. 
+                    <br><br>
+                    Se você não recebe esse auxílio, é possível comprovar seguindo os passos abaixo: 
+                    <br><br>
+                    Passo 1: Checagem de elegibilidade <br>
+                    Entre no link https://consultaauxilio.dataprev.gov.br/consulta <br>
+                    Preencha seus dados <br>
+                    Verifique o resultado 
+                    <br>
+                    Você pode entrar com recurso <br>
+                    > Se você está elegível, mas não é responsável pelo grupo familiar (titular do Auxílio Emergencial) <br>
+                    > Se você está inelegível
+                    <br><br>
+                    Tire uma fotografia desta página para comprovar sua situação, caso vá entrar com recurso. <br>
+                    <br><br>
+                    Passo 02: Checagem de recebimento <br>
+                    Entre no link https://auxilio.caixa.gov.br/#/inicio  <br>
+                    Preencha seus dados <br>
+                    Verifique o resultado 
+                    <br><br>
+                    > Se você recebeu auxílio emergencial, não pode entrar com recurso <br>
+                    > Se você não recebeu o auxílio emergencial, pode entrar com recurso <br>
+                    > Se seu CPF está irregular, precisa regularizá-lo e informar o suporte após a regularização 
+                    <br><br>
+                    Tire uma fotografia desta página para comprovar que não recebeu o auxílio, caso vá entrar com recurso  
+                    <br><br>
+                    Passo 03 – Pedido de Recurso
+                    <br><br>
+                    Após seguir os passos 01 e 02, escreva um e-mail com as seguintes informações:
+                    <br><br>
+                    > Envie o e-mail para: suportemapaculturalpa@gmail.com <br>
+                    > Assunto: Lei Aldir Blanc: Pedido de recurso – número de inscrição (coloque o número de sua inscrição que está na plataforma Mapas Culturais) <br>
+                    > Anexe as duas fotografias tiradas no passo anterior  <br>
+                    > Escreva no e-mail: <br>
+                    Eu, Seu nome, Seu CPF, solicito a revisão do resultado de minha solicitação do Auxílio Emergencial da Cultura, pois declaro que não recebo o Auxílio Emergencial e comprovo a partir das imagens anexadas.
+                    ' //mensagem para quem não foi aprovado pelo dataprev porque ja recebeu auxilio emergencial
+                ],
+
                 'project_id' => 3,
                 'inciso2_default' => [
                     "registrationFrom" => '2020-11-01',

@@ -1,26 +1,29 @@
 <?php
+
 /**
+ * ARQUIVO DE CONFIGURAÇÃO CNAB240 PARÁ
+ * 
  * Explicação da estrutura de cada campo
- * 1) - length = A quantidade de caracteres que esse registro deve ter no TXT. 
+ * 1) - length = A quantidade de caracteres que esse registro deve ter no TXT.
  *      Caso seja um registro do tipo numérico e esse registro tenha uma quantidade menor que a quantidade de caracteres exigida, deve se completar com zeros a esquerda
  *      Caso Sejaum registro do tipo texto esse registro tenha uma quantidade menor que a quantidade de caracteres exigida, deve se completar com espaços em branco a direita.
- * 
- * 
+ *
+ *
  * 2) - default = (Um valor fixo, que será exibido diretamente no TXT)
- * 
- * 
- * 3) - field_id = Caso um registro estaja na base de dados, deve informar aqui o field_id onde se deve buscar os registros. 
+ *
+ *
+ * 3) - field_id = Caso um registro estaja na base de dados, deve informar aqui o field_id onde se deve buscar os registros.
  *      OBS.: Caso use o field_id, favor setar como null o campo default
- * 
- * 
- * 4) - type = tipo de dado que sera inserido. 
- *      int = a numérico 
+ *
+ *
+ * 4) - type = tipo de dado que sera inserido.
+ *      int = a numérico
  *      string = texto
- * 
+ *
  * OBSERVAÇÕES
- * - Os campos textos, não deve conter quaqlquer tipo de caracter especial ou acentuação. 
+ * - Os campos textos, não deve conter quaqlquer tipo de caracter especial ou acentuação.
  *   Já está sendo feito um tratamento para isso, porem sempre se atentar no arquivo TXT para que o mesmo nao seja recusado pelo banco
- * 
+ *
  * - O Fromato de data e hora, deve ser na sequência
  *   dia/mes/ano = 01/01/2020. => No arquivo a formatação não deve conter caracteres especiais.
  *   hora : minutos : segundos = 00:00:00 => No arquivo a formatação não deve conter caracteres especiais.
@@ -45,7 +48,7 @@ return [
             'field_id' => null,
             'type' => 'int',
         ],
-        'USO_BANCO_12' => [// Inserido 9 espaços vazios
+        'USO_BANCO_12' => [ // Inserido 9 espaços vazios
             'length' => 9,
             'default' => null,
             'field_id' => null,
@@ -81,7 +84,7 @@ return [
             'field_id' => null,
             'type' => 'string',
         ],
-        'CONVENIO_BB4' => [ // Campo dedicado a testes, Em teoria quando um arquivo for enviado ao BB como TESTE deve-se insetir as letras TS exite opção na janela de exportação para informar se o arquivo é teste ou não 
+        'CONVENIO_BB4' => [ // Campo dedicado a testes, Em teoria quando um arquivo for enviado ao BB como TESTE deve-se insetir as letras TS exite opção na janela de exportação para informar se o arquivo é teste ou não
             'length' => 2,
             'default' => null,
             'field_id' => 'mapped',
@@ -119,7 +122,7 @@ return [
         ],
         'NOME_EMPRESA' => [ //Nome da fonte pagadora
             'length' => 30,
-            'default' => null,
+            'default' => 'SECRETARIA DE ESTADO DE CULTURA',
             'field_id' => null,
             'type' => 'string',
         ],
@@ -218,7 +221,7 @@ return [
         'FORMA_LANCAMENTO' => [
             'length' => 2,
             'default' => null, // A separação desse dado hoje ocorre de forma automática dúvidas analisar particularidades BB
-            'field_id' =>  null,
+            'field_id' => null,
             'type' => 'int',
         ],
         'LAYOUT_LOTE' => [ // Por default fomos orientados a deichar sempre 020, porem o campo não e criticado pelo BB segundo particularidades
@@ -233,7 +236,7 @@ return [
             'field_id' => null,
             'type' => 'string',
         ],
-        'INSCRICAO_TIPO' => [ // CPF ou CNPJ da entidade pagadora (1 = CPF ou 2 = CNPJ) 
+        'INSCRICAO_TIPO' => [ // CPF ou CNPJ da entidade pagadora (1 = CPF ou 2 = CNPJ)
             'length' => 1,
             'default' => '2',
             'field_id' => null,
@@ -244,7 +247,7 @@ return [
             'default' => '05.252.176/0001-54',
             'field_id' => null,
             'type' => 'int',
-        ],        
+        ],
         'CONVENIO_BB1' => [ // Número do convênio da fonte pagadora junto ao BB. Deve-ser verificar com secretaria da cultura
             'length' => 9,
             'default' => '265894',
@@ -263,7 +266,7 @@ return [
             'field_id' => null,
             'type' => 'string',
         ],
-        'CONVENIO_BB4' => [ // Campo dedicado a testes, Em teoria quando um arquivo for enviado ao BB como TESTE deve-se insetir as letras TS exite opção na janela de exportação para informar se o arquivo é teste ou não 
+        'CONVENIO_BB4' => [ // Campo dedicado a testes, Em teoria quando um arquivo for enviado ao BB como TESTE deve-se insetir as letras TS exite opção na janela de exportação para informar se o arquivo é teste ou não
             'length' => 2,
             'default' => null,
             'field_id' => 'mapped',
@@ -272,12 +275,6 @@ return [
         'AGENCIA' => [ //Agência bancária de fonte pagadora
             'length' => 5,
             'default' => '1674',
-            'field_id' => 'mapped',
-            'type' => 'int',
-        ],
-        'AGENCIA' => [ //Agência bancária de fonte pagadora
-            'length' => 5,
-            'default' => null,
             'field_id' => 'mapped',
             'type' => 'int',
         ],
@@ -319,7 +316,7 @@ return [
         ],
         'LOGRADOURO' => [ // Logradouro do endereço da fonte pagadora
             'length' => 30,
-            'default' => 'AV MAGALHAES BARATA',
+            'default' => 'AVENIDA GOVERNADOR MAGALHAES BARATA',
             'field_id' => null,
             'type' => 'string',
         ],
@@ -341,33 +338,33 @@ return [
             'field_id' => null,
             'type' => 'string',
         ],
-        'CEP' => [  // CEP do endereço da fonte pagadora
+        'CEP' => [ // CEP do endereço da fonte pagadora
             'length' => 8,
-            'default' => '66.063-240',
+            'default' => '66.060-281',
             'field_id' => null,
             'type' => 'int',
         ],
-        'ESTADO' => [  // Estado do endereço da fonte pagadora
+        'ESTADO' => [ // Estado do endereço da fonte pagadora
             'length' => 2,
             'default' => 'PA',
             'field_id' => null,
             'type' => 'string',
         ],
-        'USO_BANCO_60' => [  //Não usar, uso exclusivo do banco
+        'USO_BANCO_60' => [ //Não usar, uso exclusivo do banco
             'length' => 8,
             'default' => null,
             'field_id' => null,
             'type' => 'string',
         ],
-        'USO_BANCO_61' => [  //Não usar, uso exclusivo do banco
+        'USO_BANCO_61' => [ //Não usar, uso exclusivo do banco
             'length' => 10,
             'default' => null,
             'field_id' => null,
             'type' => 'int',
         ],
-    ],    
+    ],
     'DETALHE1' => [
-        'BANCO' => [ // Banco que faŕa o pagamento, nesse caso por default 001 que se refere ao Banco do Brasil 
+        'BANCO' => [ // Banco que faŕa o pagamento, nesse caso por default 001 que se refere ao Banco do Brasil
             'length' => 3,
             'default' => '001',
             'field_id' => null,
@@ -397,18 +394,18 @@ return [
             'field_id' => null,
             'type' => 'string',
         ],
-        'TIPO_MOVIMENTO' => [ // Nesse caso deve ser default 0 REF.: particularidades (Inclusão = '0', Exclusão = '9') 
+        'TIPO_MOVIMENTO' => [ // Nesse caso deve ser default 0 REF.: particularidades (Inclusão = '0', Exclusão = '9')
             'length' => 1,
             'default' => '0',
             'field_id' => null,
             'type' => 'int',
         ],
-        'CODIGO_MOVIMENTO' => [ // Nesse caso deve ser default 00 REF.: particularidades (Inclusão = '00', Exclusão = '99') 
+        'CODIGO_MOVIMENTO' => [ // Nesse caso deve ser default 00 REF.: particularidades (Inclusão = '00', Exclusão = '99')
             'length' => 2,
             'default' => '00',
             'field_id' => null,
             'type' => 'int',
-        ],       
+        ],
         'CAMARA_CENTRALIZADORA' => [ //Deixar por default o fild_id em mapped. Exportador se encarrega de processar
             'length' => 3,
             'default' => null,
@@ -486,7 +483,7 @@ return [
             'default' => null,
             'field_id' => 'mapped',
             'type' => 'int',
-        ],        
+        ],
         'USO_BANCO_88' => [ //Uso do banco, não utilizar
             'length' => 20,
             'default' => null,
@@ -499,8 +496,14 @@ return [
             'field_id' => null,
             'type' => 'int',
         ],
+        'OUTRAS_INFO_233A' => [ //Uso do banco, não utilizar
+            'length' => 2,
+            'default' => null,
+            'field_id' => 'mapped',
+            'type' => 'string',
+        ],
         'USO_BANCO_90' => [ //Uso do banco, não utilizar
-            'length' => 42,
+            'length' => 40,
             'default' => null,
             'field_id' => null,
             'type' => 'string',
@@ -511,13 +514,13 @@ return [
             'field_id' => 'mapped',
             'type' => 'string',
         ],
-        'USO_BANCO_92' => [  //Uso do banco, não utilizar
+        'USO_BANCO_92' => [ //Uso do banco, não utilizar
             'length' => 5,
             'default' => null,
             'field_id' => null,
             'type' => 'string',
         ],
-        'USO_BANCO_93' => [  //Uso do banco, não utilizar
+        'USO_BANCO_93' => [ //Uso do banco, não utilizar
             'length' => 11,
             'default' => null,
             'field_id' => null,
@@ -528,8 +531,7 @@ return [
             'default' => null,
             'field_id' => 'field_8131',
             'type' => 'int',
-        ]
-        
+        ],
 
     ],
     'DETALHE2' => [
@@ -557,7 +559,7 @@ return [
             'field_id' => null,
             'type' => 'int',
         ],
-        'SEGMENTO' => [   //por default manter sempre B por orientação particularidades BB
+        'SEGMENTO' => [ //por default manter sempre B por orientação particularidades BB
             'length' => 1,
             'default' => 'B',
             'field_id' => null,
@@ -593,18 +595,18 @@ return [
             'field_id' => 'field_118',
             'type' => 'int',
         ],
-        'BEN_ENDERECO_COMPLEMENTO' => [// Field_id do campo do complemento endereço do beneficiário
+        'BEN_ENDERECO_COMPLEMENTO' => [ // Field_id do campo do complemento endereço do beneficiário
             'length' => 15,
             'default' => null,
             'field_id' => 'field_118',
             'type' => 'string',
-        ],        
+        ],
         'BEN_ENDERECO_BAIRRO' => [ // Field_id do campo do bairro do beneficiário
             'length' => 15,
             'default' => null,
             'field_id' => 'field_118',
             'type' => 'string',
-        ],        
+        ],
         'BEN_ENDERECO_CIDADE' => [ // Field_id do campo do cidade do beneficiário
             'length' => 20,
             'default' => null,
@@ -685,26 +687,26 @@ return [
             'field_id' => null,
             'type' => 'int',
         ],
-        'USO_BANCO_130' => [// Uso do banco, nao utilizar
+        'USO_BANCO_130' => [ // Uso do banco, nao utilizar
             'length' => 24,
             'default' => null,
             'field_id' => null,
             'type' => 'int',
         ],
-        'USO_BANCO_131' => [// Uso do banco, nao utilizar
+        'USO_BANCO_131' => [ // Uso do banco, nao utilizar
             'length' => 165,
             'default' => null,
             'field_id' => null,
             'type' => 'string',
         ],
-        'USO_BANCO_132' => [// Uso do banco, nao utilizar
+        'USO_BANCO_132' => [ // Uso do banco, nao utilizar
             'length' => 10,
             'default' => null,
             'field_id' => null,
             'type' => 'string',
         ],
     ],
-    'TRAILER2' => [//Banco que fará o pagamento do benefício. Nesse caso 001 que faz referência ao Banco do Brasil
+    'TRAILER2' => [ //Banco que fará o pagamento do benefício. Nesse caso 001 que faz referência ao Banco do Brasil
         'BANCO' => [
             'length' => 3,
             'default' => '001',
@@ -740,7 +742,7 @@ return [
             'default' => null,
             'field_id' => null,
             'type' => 'int',
-        ],       
+        ],
         'USO_BANCO_144' => [ //Uso do banco, nao utilizar
             'length' => 6,
             'default' => null,
@@ -752,19 +754,19 @@ return [
             'default' => null,
             'field_id' => null,
             'type' => 'string',
-        ]       
+        ],
     ],
     'parameters_default' => [
-        'status' => 1,
+        //'status' => 1,
         'defaultBank' => false, // caso exista banco padrão para pagamento, alterar flag => (true = sim, false = não);
-        'informDefaultBank' => false, // Caso exista um banco padrão para pagamento, informar numero do banco aqui 
+        'informDefaultBank' => false, // Caso exista um banco padrão para pagamento, informar numero do banco aqui
         'typesAccount' => [ //Tipos de contas existentes no formulário
             'corrente' => 'Conta corrente',
             'poupanca' => 'Conta poupança',
         ],
-        'ducumentsType' => [  // Documentos que existirá(cnab240 = Bancarizados, unbanked = Desbancarizados)
+        'ducumentsType' => [ // Documentos que existirá(cnab240 = Bancarizados, unbanked = Desbancarizados)
             "cnab240" => true,
-            "unbanked" => true 
+            "unbanked" => true,
         ],
         'selfDeclaredBB' => false, // Preencher esse campo, caso exista a pergunta se o requerente é correntista BB ou Não
         'formoReceipt' => 'field_8564', // Campo para informar onde buscar opções de recebimento EX.: CARTEIRA DIGITAL BB ou CONTA BANCÁRIA NO BANCO DO BRASIL ABERTA PELA SECULT-ES
@@ -781,27 +783,25 @@ return [
             '9' => '1',
             'X' => '2',
         ],
-        'field_TipoConta' => 'field_8131',// Field_id que busca o tipo de do benefíciario conta corrente ou poupança
+        'field_TipoConta' => 'field_8131', // Field_id que busca o tipo de do benefíciario conta corrente ou poupança
         'field_banco' => 'field_111', // Field_id que busca o banco do benefpiciario
         'field_agency' => 'field_112',
-        'fieldsWalletDigital' =>[ //Caso exista campos para carteira digital BB, inserir aqui o field_id 
+        'fieldsWalletDigital' => [ //Caso exista campos para carteira digital BB, inserir aqui o field_id
             'agency' => false,
-            'account' =>  false
+            'account' => false,
         ],
         'monoParentIgnore' => false, //caso queira barrar o envio de pessoas monoparentais no arquivo, deixar setado com true, em outros casos setar false
         'womanMonoParent' => 'field_119',
-        'fromToAccounts' => 'CSV/fromToAccounts.csv', // Caso exista um arquivo para captura de contas bancárioas, colocar o aqruivo na raiz AldirBlanc e passar o caminho aqui 
-        'typesReceipt'=> [//Faz a separação de bancarizado e desbancarixado, informar segundo campos do formulário
+        'fromToAccounts' => 'CSV/fromToAccounts.csv', // Caso exista um arquivo para captura de contas bancárioas, colocar o aqruivo na raiz AldirBlanc e passar o caminho aqui
+        'typesReceipt' => [ //Faz a separação de bancarizado e desbancarixado, informar segundo campos do formulário
             'banked' => [
                 'Depósito bancário',
-                'CARTEIRA DIGITAL BB'
+                'CARTEIRA DIGITAL BB',
             ],
             'unbanked' => [
                 'Ordem de pagamento para saque nos caixas da rede 24H',
-                'CONTA BANCÁRIA NO BANCO DO BRASIL ABERTA PELA SECULT-ES'
-            ]
-        ]
+                'CONTA BANCÁRIA NO BANCO DO BRASIL ABERTA PELA SECULT-ES',
+            ],
+        ],
     ],
-    
-    
 ];

@@ -10,7 +10,7 @@ return [
             'namespace' => 'AldirBlanc',
             'config' => [
 
-                'dias_para_recurso' => env('AB_DIAS_PARA_RECURSO', 6),
+                'dias_para_recurso' => env('AB_DIAS_PARA_RECURSO', 3),
                 'de_para_avaliacoes' => [
 
                     'auto declara' => 'Sua solicitação não foi aprovada porque a autodeclaração enviada na sua inscrição está incorreta, mas você pode entrar com recurso para a atualização da autodeclaração e recebimento do auxílio emergencial da cultura! 

@@ -314,6 +314,9 @@ return [
                 'ppg_email_subject' => env('AB_EMAIL_PPG_EMAIL_SUBJECT', '[Lei Aldir Blanc] Pagamento do benefício - Segunda e terceira parcela'),
                 'ppg_email_signature' => env('AB_EMAIL_PPG_EMAIL_SIGNATURE', 'Equipe Secretaria de Cultura do Estado do Pará'),
 
+                // Reply-to para os e-mails do PPG
+                'ppg_email_replyto' => env('AB_EMAIL_PPG_REPLYTO', 'suportemapaculturalpa@gmail.com'),
+
                 // define os ids para dataprev e avaliadores genericos
                 'avaliadores_dataprev_user_id' => (array) json_decode(env('AB_AVALIADORES_DATAPREV_USER_ID', '["9757"]')),
                 'avaliadores_genericos_user_id' => (array) json_decode(env('AB_AVALIADORES_GENERICOS_USER_ID', '["11283", "9758"]')),

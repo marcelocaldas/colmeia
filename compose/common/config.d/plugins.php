@@ -343,6 +343,22 @@ return [
 De acordo com o sistema, seu CPF foi identificado como "titular de benefício previdenciário ou assistencial; ou beneficiário do seguro desemprego; ou contemplado com benefício emergencial".<br><br>
 A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possível homologar o acesso ao auxílio sem a validação da DataPrev.'),
 
+                'dados_bancarios_inciso1_fields' => [
+                    'banco' => 'field_111',
+                    'agencia' => 'field_112',
+                    'conta' => 'field_113',
+                    'agencia_dv' => 'field_9772',
+                    'conta_dv' => 'field_9773',
+                    'conta_tipo' => 'field_8131',
+                ],
+                'mapeamento_bancos' => [
+                    // 'Inexistente' => '1365'
+                    // 'CAIXA ECONOMICA FEDERAL' =>  '104',
+                    'BANCO DO BRASIL S.A' => '001',
+                    'ITAÚ UNIBANCO S.A..' => '341',
+                    'BCO BRADESCO S.A' => '237',
+                    'BCO SANTANDER (BRASIL) S.A' => '033'
+                ]
             ],
         ],
 

@@ -227,11 +227,16 @@ return [
         ],
     ],
     "condition" => [
-        "operator" => "and",
+        "operator" => "or",
         "operands" => [
             [
-                "operator" => "exists",
-                "operands" => ["wantsPaymentOrder"],
+                "operator" => "not",
+                "operands" => [
+                    [
+                        "operator" => "exists",
+                        "operands" => ["wantsPaymentOrder"],
+                    ]
+                ],
             ],
             [
                 "operator" => "prefix",
@@ -240,10 +245,6 @@ return [
                     ["const" => "Ordem de pagamento"],
                 ],
             ],
-            // [
-            //     "operator" => "equals",
-            //     "operands" => ["singleParent", ["const" => "NÃO"]]
-            // ],
         ],
     ],
     "return" => [

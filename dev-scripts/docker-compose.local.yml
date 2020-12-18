@@ -5,7 +5,7 @@ services:
       context: ../
       dockerfile: compose/local/Dockerfile
     ports:
-      - "80:80"
+      - "8080:80"
     volumes:
       - ../docker-data/assets:/var/www/html/assets
       - ../docker-data/public-files:/var/www/html/files
@@ -18,9 +18,14 @@ services:
       # themes and plugins
       - ../themes/MapasComBr:/var/www/html/protected/application/themes/MapasComBr
       - ../plugins/AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
-      - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
-      - ../plugins/SamplePlugin:/var/www/html/protected/application/plugins/SamplePlugin
+      - ../plugins/AldirBlancDataprev:/var/www/html/protected/application/plugins/AldirBlancDataprev
+      - ../plugins/AldirBlancPreDataprev:/var/www/html/protected/application/plugins/AldirBlancPreDataprev
       - ../plugins/AldirBlancRedirects:/var/www/html/protected/application/plugins/AldirBlancRedirects
+      - ../plugins/AldirBlancValidador:/var/www/html/protected/application/plugins/AldirBlancValidador
+      - ../plugins/AldirBlancValidadorFinanceiro:/var/www/html/protected/application/plugins/AldirBlancValidadorFinanceiro
+      - ../plugins/AldirBlancValidadorRecurso:/var/www/html/protected/application/plugins/AldirBlancValidadorRecurso
+      - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
+      - ../plugins/RegistrationPayments:/var/www/html/protected/application/plugins/RegistrationPayments
 
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10
@@ -28,7 +33,7 @@ services:
 
     depends_on:
       - db
-  
+
     stdin_open: true
     tty: true
 

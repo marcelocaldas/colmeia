@@ -65,13 +65,13 @@ return [
             "length" => 9,
             "type" => "int",
             "name" => "mciCliente",
-            "default" => 300761608, // preenchimento SECULT
+            "default" => env("PPG_MCI_CLIENTE", 0),
         ],
         [
             "length" => 9,
             "type" => "int",
             "name" => "codigoParametroCliente",
-            "default" => 26, // preenchimento SECULT
+            "default" => env("PPG_COD_PARAM_CLIENTE", 0),
         ],
         [
             "length" => 3,
@@ -95,13 +95,13 @@ return [
             "length" => 4,
             "type" => "int",
             "name" => "agenciaDebito",
-            "default" => 1674, // preenchimento SECULT
+            "default" => env("PPG_AGENCIA_DEBITO", 0),
         ],
         [
             "length" => 9,
             "type" => "int",
             "name" => "contaDebito",
-            "default" => 12969, // preenchimento SECULT
+            "default" => env("PPG_CONTA_DEBITO", 0),
         ],
         [
             "length" => 120,
@@ -140,7 +140,7 @@ return [
                             "length" => 3, // 3 no novo formato, 4 no antigo
                             "type" => "int",
                             "name" => "idBB",
-                            "default" => 26, // preenchimento SECULT
+                            "default" => env("PPG_COD_PARAM_CLIENTE", 0),
                         ],
                         [
                             "length" => 6, // 6 no novo formato, 10 no antigo
@@ -227,25 +227,26 @@ return [
         ],
     ],
     "condition" => [
-        "operator" => "or",
-        "operands" => [
-            [
-                "operator" => "not",
-                "operands" => [
-                    [
-                        "operator" => "exists",
-                        "operands" => ["wantsPaymentOrder"],
-                    ]
-                ],
-            ],
-            [
-                "operator" => "prefix",
-                "operands" => [
-                    "wantsPaymentOrder",
-                    ["const" => "Ordem de pagamento"],
-                ],
-            ],
-        ],
+        "const" => true,
+        // "operator" => "or",
+        // "operands" => [
+        //     [
+        //         "operator" => "not",
+        //         "operands" => [
+        //             [
+        //                 "operator" => "exists",
+        //                 "operands" => ["wantsPaymentOrder"],
+        //             ]
+        //         ],
+        //     ],
+        //     [
+        //         "operator" => "prefix",
+        //         "operands" => [
+        //             "wantsPaymentOrder",
+        //             ["const" => "Ordem de pagamento"],
+        //         ],
+        //     ],
+        // ],
     ],
     "return" => [
         "topLevel" => [
@@ -294,13 +295,13 @@ return [
                     "length" => 9,
                     "type" => "int",
                     "name" => "mciCliente",
-                    "match" => 300761608, // preenchimento SECULT
+                    "match" => env("PPG_MCI_CLIENTE", 0),
                 ],
                 [
                     "length" => 9,
                     "type" => "int",
                     "name" => "codigoParametroCliente",
-                    "match" => 26, // preenchimento SECULT
+                    "match" => env("PPG_COD_PARAM_CLIENTE", 0),
                 ],
                 [
                     "length" => 3,
@@ -318,13 +319,13 @@ return [
                     "length" => 4,
                     "type" => "int",
                     "name" => "agenciaDebito",
-                    "match" => 1674, // preenchimento SECULT
+                    "match" => env("PPG_AGENCIA_DEBITO", 0),
                 ],
                 [
                     "length" => 9,
                     "type" => "int",
                     "name" => "contaDebito",
-                    "match" => 12969, // preenchimento SECULT
+                    "match" => env("PPG_CONTA_DEBITO", 0),
                 ],
                 [
                     "length" => 5,
@@ -367,7 +368,7 @@ return [
                     "length" => 3, // 3 no novo formato, 4 no antigo
                     "type" => "int",
                     "name" => "idBB",
-                    "match" => 26, // preenchimento SECULT
+                    "match" => env("PPG_COD_PARAM_CLIENTE", 0),
                 ],
                 [
                     "length" => 6, // 6 no novo formato, 10 no antigo
@@ -477,13 +478,13 @@ return [
                     "length" => 9,
                     "type" => "int",
                     "name" => "mciCliente",
-                    "match" => 300761608, // preenchimento SECULT
+                    "match" => env("PPG_MCI_CLIENTE", 0),
                 ],
                 [
                     "length" => 4,
                     "type" => "int",
                     "name" => "numeroContrato",
-                    "match" => 26, // preenchimento SECULT
+                    "match" => env("PPG_COD_PARAM_CLIENTE", 0),
                 ],
                 [
                     "length" => 36,
@@ -508,7 +509,7 @@ return [
                     "length" => 3, // 3 no novo formato, 4 no antigo
                     "type" => "int",
                     "name" => "idBB",
-                    "match" => 26, // preenchimento SECULT
+                    "match" => env("PPG_COD_PARAM_CLIENTE", 0),
                 ],
                 [
                     "length" => 6, // 6 no novo formato, 10 no antigo

@@ -425,6 +425,8 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
 
         'RegistrationPayments' => [ 'namespace' => 'RegistrationPayments' ],
 
+        'Recursos' => ['namespace' => 'AldirBlancValidadorRecurso'],
+
         'Financeiro' => [
             'namespace' => 'AldirBlancValidadorFinanceiro',
             'config' => [

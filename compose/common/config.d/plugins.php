@@ -335,7 +335,7 @@ return [
 
                 // informacoes para recurso das inscrições com status 2 e 3
                 'email_recurso' => env('AB_EMAIL_RECURSO', 'suportemapaculturalpa@gmail.com'),
-                'msg_recurso' => env('AB_MENSAGEM_RECURSO', 'Você pode entrar com recurso enviando os documentos pendentes exclusivamente para o e-mail suportemapaculturalpa@gmail.com com o assunto: Recurso - pa-00000000 (número da sua inscrição).'),
+                'msg_recurso' => env('AB_MENSAGEM_RECURSO', ''),
 
                 // mensagem para reprocessamento do Dataprev, para ignorar a mensagem retornada pelo Dataprev e exibir a mensagem abaixo
                 'msg_reprocessamento_dataprev' => env('AB_MENSAGEM_REPROCESSAMENTO_DATAPREV', 'Seu status foi alterado de Selecionado(a) para Não Selecionado(a). Isso aconteceu por erro da DataPrev, sistema disponibilizado pelo Governo Federal para cruzamento de dados dos CPF´s, que averigua se solicitantes do auxílio emergencial cumprem os critérios previstos na Lei 14.017/2020.<br><br>

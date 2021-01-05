@@ -427,7 +427,7 @@ return [
         'BEN_AGENCIA_DIGITO' => [ // Field_id do campo do dígito da agência bancária do beneficiário
             'length' => 1,
             'default' => null,
-            'field_id' => 'field_112',
+            'field_id' => 'field_9772',
             'type' => 'int',
         ],
         'BEN_CONTA' => [ // Field_id do campo da conta bancária do beneficiário
@@ -439,7 +439,7 @@ return [
         'BEN_CONTA_DIGITO' => [ // Field_id do campo do dígito da conta bancária do beneficiário
             'length' => 1,
             'default' => null,
-            'field_id' => 'field_113',
+            'field_id' => 'field_9773',
             'type' => 'int',
         ],
         'BEN_DIGITO_CONTA_AGENCIA_80' => [ //Por default manter sempre como null

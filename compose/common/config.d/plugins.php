@@ -435,5 +435,8 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
                 'consolidacao_requer_validacoes' => []
             ],
         ],
+
+        'MapasBlame' => ['namespace' => 'MapasBlame'],
+
     ]
 ];

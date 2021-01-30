@@ -29,8 +29,7 @@ return [
 
         'strategies' => [
             'Facebook' => array(
-                'visible' => env('AUTH_FACEBOOK_CLIENT_ID', true),
-                'app_id' => env('AUTH_FACEBOOK_APP_ID', null),
+                'visible' => env('AUTH_FACEBOOK_CLIENT_ID', false),
                 'app_id' => env('AUTH_FACEBOOK_APP_ID', null),
                 'app_secret' => env('AUTH_FACEBOOK_APP_SECRET', null),
                 'scope' => env('AUTH_FACEBOOK_SCOPE', 'email'),

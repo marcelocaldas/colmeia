@@ -25,7 +25,7 @@ return [
         'sessionTime' => env('AUTH_SESSION_TIME', 7200), // int , tempo da sessao do usuario em segundos
         'numberloginAttemp' => env('AUTH_NUMBER_ATTEMPTS', 5), // tentativas de login antes de bloquear o usuario por X minutos
         'timeBlockedloginAttemp' => env('AUTH_BLOCK_TIME', 900), // tempo de bloqueio do usuario em segundos
-
+        'statusCreateAgent' => env('STATUS_CREATE_AGENT', 0),
 
         'strategies' => [
             'Facebook' => array(

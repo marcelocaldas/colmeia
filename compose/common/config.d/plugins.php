@@ -10,6 +10,10 @@ return [
             'namespace' => 'AldirBlanc',
             'config' => [
 
+                'texto_home'=> env('AB_TEXTO_HOME',null),
+                'botao_home'=> env('AB_BOTAO_HOME',null),
+                'titulo_home'=> env('AB_TITULO_HOME',null),
+
                 'dias_para_recurso' => env('AB_DIAS_PARA_RECURSO', 2),
                 'de_para_avaliacoes' => [],
 

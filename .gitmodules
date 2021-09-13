@@ -25,3 +25,6 @@
 [submodule "plugins/MapasBlame"]
 	path = plugins/MapasBlame
 	url = https://github.com/mapasculturais/plugin-MapasBlame
+[submodule "plugins/MapasNetwork"]
+	path = plugins/MapasNetwork
+	url = https://github.com/mapasculturais/plugin-MapasNetwork.git

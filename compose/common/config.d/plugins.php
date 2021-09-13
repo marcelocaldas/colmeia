@@ -1,5 +1,5 @@
 <?php
-return [
+$config_plugin = [
     'plugins' => [
         'EvaluationMethodTechnical' => ['namespace' => 'EvaluationMethodTechnical'],
         'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
@@ -361,6 +361,22 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
         ],
 
         'MapasBlame' => ['namespace' => 'MapasBlame'],
-
+        "MapasNetwork" => [
+            "namespace" => "MapasNetwork",
+            "config" => [
+                'nodes' => explode(",", env("MAPAS_NETWORK_NODES", "")),
+                'filters' => [
+                    'agent' => [ 'En_Estado' => 'PA' ],
+                    'space' => [ 'En_Estado' => 'PA' ],
+                ]
+            ]
+        ] 
     ]
 ];
+
+
+if(!env("MAPAS_NETWORK_ENABLED", false)){
+unset($config_plugin['plugins']['MapasNetwork']);
+}
+
+return $config_plugin;

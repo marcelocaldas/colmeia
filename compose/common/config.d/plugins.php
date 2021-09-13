@@ -1,5 +1,5 @@
 <?php
-$config_plugin = [
+$config_plugins = [
     'plugins' => [
         'EvaluationMethodTechnical' => ['namespace' => 'EvaluationMethodTechnical'],
         'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
@@ -376,7 +376,7 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
 
 
 if(!env("MAPAS_NETWORK_ENABLED", false)){
-unset($config_plugin['plugins']['MapasNetwork']);
+unset($config_plugins['plugins']['MapasNetwork']);
 }
 
-return $config_plugin;
+return $config_plugins;

@@ -360,7 +360,14 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
             ],
         ],
 
-        'MapasBlame' => ['namespace' => 'MapasBlame'],
+        'MapasBlame' => [
+            'namespace' => 'MapasBlame',
+            'config' => [                                          
+                'request.logData.PATCH' => function ($data) {
+                    return $data;
+                },               
+            ]
+        ],
         "MapasNetwork" => [
             "namespace" => "MapasNetwork",
             "config" => [

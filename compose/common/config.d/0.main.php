@@ -1,4 +1,4 @@
-<?php 
+<?php
 use MapasCulturais\i;
 
 if (env('REDIS_CACHE', false)) {
@@ -6,7 +6,7 @@ if (env('REDIS_CACHE', false)) {
     $redis->connect('redis');
     $cache = new \Doctrine\Common\Cache\RedisCache;
     $cache->setRedis($redis);
-    
+
     $redis = new \Redis();
     $redis->connect('redis');
     $mscache = new \Doctrine\Common\Cache\RedisCache;
@@ -32,11 +32,14 @@ return [
         'Subsite' => THEMES_PATH . 'Subsite/',
     ),
 
+    'registration.autosaveTimeout' => env('REGISTRATION_AUTOSAVE_INTERVAL', MINUTE_IN_SECONDS * 1000),
+
     'doctrine.database' => [
         'host'           => env('DB_HOST', 'db'),
         'dbname'         => env('DB_NAME', 'mapas'),
         'user'           => env('DB_USER', 'mapas'),
         'password'       => env('DB_PASS', 'mapas'),
         'server_version' => env('DB_VERSION', 10),
-    ]
+    ],
+    'ini.set' => json_decode(env('PHP_INI_SET', '[]'))
 ];

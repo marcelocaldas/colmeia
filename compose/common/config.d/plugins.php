@@ -10,8 +10,8 @@ $config_plugins = [
                 "enable" => env("LOCATION_PATCH_ENABLE", true),
                 "cutoff" => env("LOCATION_PATCH_CUTOFF", "19800101000001"),
             ],
-        ],   
-        
+        ],
+
         'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
         'AldirBlanc' => [
             'namespace' => 'AldirBlanc',
@@ -369,10 +369,10 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
 
         'MapasBlame' => [
             'namespace' => 'MapasBlame',
-            'config' => [                                          
+            'config' => [
                 'request.logData.PATCH' => function ($data) {
                     return $data;
-                },               
+                },
             ]
         ],
         "MapasNetwork" => [
@@ -384,13 +384,8 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
                     'space' => [ 'En_Estado' => 'PA' ],
                 ]
             ]
-        ] 
+        ]
     ]
 ];
-
-
-if(!env("MAPAS_NETWORK_ENABLED", false)){
-unset($config_plugins['plugins']['MapasNetwork']);
-}
 
 return $config_plugins;

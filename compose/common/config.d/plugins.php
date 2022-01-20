@@ -379,6 +379,7 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
             "namespace" => "MapasNetwork",
             "config" => [
                 'nodes' => explode(",", env("MAPAS_NETWORK_NODES", "")),
+                "nodeSlug" => env("MAPAS_NETWORK_SLUG", ($_SERVER["HOSTNAME"] ?? parse_url(\MapasCulturais\App::i()->baseUrl, PHP_URL_HOST))),
                 'filters' => [
                     'agent' => [ 'En_Estado' => 'PA' ],
                     'space' => [ 'En_Estado' => 'PA' ],

@@ -389,4 +389,8 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
     ]
 ];
 
+if(!env("MAPAS_NETWORK_ENABLED", false)){
+    unset($config_plugins['plugins']['MapasNetwork']);
+}
+
 return $config_plugins;

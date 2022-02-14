@@ -17,7 +17,9 @@ $config_plugins = [
             'namespace' => 'AldirBlanc',
             'config' => [
 
-                'texto_home'=> env('AB_TEXTO_HOME',null),
+                'texto_home'=> env('AB_TEXTO_HOME',"Já estão abertas as inscrições para os editais Preamar da Leitura e Preamar de Cultura e Arte. O primeiro vai credenciar até 200 bibliotecas públicas do Estado para fins de recebimento de <br> 
+                doação de livros. Já o segundo, destina-se à distribuição de 5 milhões de reais, que premiará mais de 200 propostas culturais inéditas em diversas linguagens, expressões, 
+                práticas, <br>manifestações e segmentos culturais do Estado. Inscreva-se pelo Mapa Cultural. Não perca essa chance e vem realizar com a gente!"),
                 'botao_home'=> env('AB_BOTAO_HOME',null),
                 'titulo_home'=> env('AB_TITULO_HOME',null),
 
@@ -384,6 +386,17 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
                     'agent' => [ 'En_Estado' => 'PA' ],
                     'space' => [ 'En_Estado' => 'PA' ],
                 ]
+            ]
+        ],
+        "HomeContent" => [
+            "namespace" => "HomeContent",
+            "config" => [
+                "title_home" => "",
+                "images_home" => ["homeContent/img/preamar1.png", "homeContent/img/preamar2.png"],
+                "text_home" => "Já estão abertas as inscrições para os editais Preamar da Leitura e Preamar de Cultura e Arte. O primeiro vai credenciar até 200 bibliotecas públicas do Estado para fins de recebimento de <br> 
+                    doação de livros. Já o segundo, destina-se à distribuição de 5 milhões de reais, que premiará mais de 200 propostas culturais inéditas em diversas linguagens, expressões, 
+                    práticas, <br>manifestações e segmentos culturais do Estado. Inscreva-se pelo Mapa Cultural. Não perca essa chance e vem realizar com a gente!",
+                "action_home" => "",
             ]
         ]
     ]

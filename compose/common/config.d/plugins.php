@@ -398,6 +398,12 @@ A Secult lamenta o grave erro do Governo Federal, mas reitera que não é possí
                     práticas, <br>manifestações e segmentos culturais do Estado. Inscreva-se pelo Mapa Cultural. Não perca essa chance e vem realizar com a gente!",
                 "action_home" => "",
             ]
+        ],
+        "MetadataKeyword" => [
+            "namespace" => "MetadataKeyword",
+            "config" => [
+                'location' => ['En_Municipio', 'En_Nome_Logradouro', 'En_Bairro', 'En_Estado']
+            ]
         ]
     ]
 ];

@@ -34,3 +34,6 @@
 [submodule "plugins/HomeContent"]
 	path = plugins/HomeContent
 	url = https://github.com/mapasculturais/plugin-HomeContent.git
+[submodule "plugins/MetadataKeyword"]
+	path = plugins/MetadataKeyword
+	url = https://github.com/mapasculturais/plugin-MetadataKeyword.git

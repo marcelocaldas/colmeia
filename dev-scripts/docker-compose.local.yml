@@ -14,36 +14,22 @@ services:
 
       - ../compose/common/config.d:/var/www/html/protected/application/conf/conf-common.d
       - ../compose/local/config.d:/var/www/html/protected/application/conf/config.d
-      - ../../mapasculturais/src/protected/application/themes:/var/www/html/protected/application/themes
-      - ../../mapasculturais/src/protected/application/lib:/var/www/html/protected/application/lib
-      - ../../mapasculturais/src/protected/db-updates.php:/var/www/html/protected/db-updates.php
-      - ../../mapasculturais/src/protected/application/conf/agent-types.php:/var/www/html/protected/application/conf/agent-types.php
-      - ../../mapasculturais/src/protected/application/conf/space-types.php:/var/www/html/protected/application/conf/space-types.php
 
       # themes and plugins
       - ../themes/MapasComBr:/var/www/html/protected/application/themes/MapasComBr
-      # - ../plugins/AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
-      - ../../plugin-AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
+      - ../plugins/AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
       - ../plugins/AldirBlancDataprev:/var/www/html/protected/application/plugins/AldirBlancDataprev
       - ../plugins/AldirBlancPreDataprev:/var/www/html/protected/application/plugins/AldirBlancPreDataprev
       - ../plugins/AldirBlancRedirects:/var/www/html/protected/application/plugins/AldirBlancRedirects
       - ../plugins/AldirBlancValidador:/var/www/html/protected/application/plugins/AldirBlancValidador
       - ../plugins/AldirBlancValidadorFinanceiro:/var/www/html/protected/application/plugins/AldirBlancValidadorFinanceiro
       - ../plugins/AldirBlancValidadorRecurso:/var/www/html/protected/application/plugins/AldirBlancValidadorRecurso
-      - ../../plugin-LocationPatch:/var/www/html/protected/application/plugins/LocationPatch
-      - ../../plugin-MapasNetwork:/var/www/html/protected/application/plugins/MapasNetwork
       - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
       - ../plugins/RegistrationPayments:/var/www/html/protected/application/plugins/RegistrationPayments
 
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10
       - APP_MODE=development
-      - STATUS_CREATE_AGENT=0
-      - CEP_TOKEN=b00d34334a57938e899f17f85b019615
-      - MAPS_USE_GOOGLE_GEOCODE=false
-      - MAPS_GOOGLE_API_KEY=AIzaSyDJd8Z7WEGcDVHeDXbn8hQnSXpIkthzabg
-      - LOCATION_PATCH_ENABLE=false
-      - LOCATION_PATCH_CUTOFF=20211101000000
       #AIzaSyC_7muZJ1bYph65rGQG0e5RuPnkhVgKGok
 
     depends_on:
@@ -61,7 +47,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ../compose/local/pa-dump-2021-10-20--1438.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ../compose/local/dump.sql:/docker-entrypoint-initdb.d/dump.sql
       - ../docker-data/db-data:/var/lib/postgresql/data
 
 volumes:

@@ -31,6 +31,8 @@ services:
 
       - ./compose/production/config.d:/var/www/html/protected/application/conf/config.d
       - ./compose/common/config.d:/var/www/html/protected/application/conf/conf-common.d
+      - ./compose/common/agent-types.php:/var/www/html/protected/application/conf/agent-types.php
+      - ./compose/common/location.php:/var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/location.php
     links:
       - db
     environment:

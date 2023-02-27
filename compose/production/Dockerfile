@@ -17,6 +17,7 @@ COPY compose/common/deParaContas.csv /var/www/html/protected/application/plugins
 COPY compose/common/ppgIdMap.csv /var/www/html/protected/application/plugins/AldirBlanc/CSV/ppgIdMap.csv
 COPY compose/common/agent-types.php /var/www/html/protected/application/conf/agent-types.php
 COPY compose/common/location.php /var/www/html/protected/application/conf/location.php
+COPY compose/common/lgpd-terms /var/www/html/protected/application/conf/lgpd-terms
 
 COPY compose/common/php-ini.d /usr/local/etc/php/conf.d
 

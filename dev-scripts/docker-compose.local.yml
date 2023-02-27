@@ -28,6 +28,7 @@ services:
       - ../plugins/AldirBlancValidadorRecurso:/var/www/html/protected/application/plugins/AldirBlancValidadorRecurso
       - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
       - ../plugins/RegistrationPayments:/var/www/html/protected/application/plugins/RegistrationPayments
+      - ../compose/common/lgpd-terms:/var/www/html/protected/application/conf/lgpd-terms
 
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10

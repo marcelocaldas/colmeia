@@ -20,8 +20,61 @@ return array(
             'validations' => array(
                 'required' => \MapasCulturais\i::__('CPF ou CNPJ deve ser informado.')
             ),
-         
+            'serialize' => function($value, $entity = null){
+                /**@var MapasCulturais\App $this */
+                $key = "hook:documento:{$entity}";
+                if(!$this->rcache->contains($key)){
+                    if($entity->type && $entity->type->id == 1){
+                        $entity->cpf = $value;
+                    }else if($entity->type && $entity->type->id == 2){
+                        $entity->cnpj = $value;
+
+                    }
+                   $this->rcache->save($key, 1);
+                }
+
+                return $value;
+            },
             'available_for_opportunities' => true
+        ),
+        
+        'cnpj' => array(
+            'private' => true,
+            'label' => \MapasCulturais\i::__('CNPJ'),
+            'serialize' => function($value, $entity = null){
+                /**@var MapasCulturais\App $this */
+                $key = "hook:cnpj:{$entity}";
+                if(!$this->rcache->contains($key)){
+                    if($entity->type && $entity->type->id == 2){
+                        $entity->documento = $value;
+                    }
+                    $this->rcache->save($key, 1);
+                }
+                return $value;
+            },
+            'validations' => array(
+                'v::cnpj()' => \MapasCulturais\i::__('O número de CNPJ informado é inválido.')
+             ),
+            'available_for_opportunities' => true,
+        ),
+        'cpf' => array(
+            'private' => true,
+            'label' => \MapasCulturais\i::__('CPF'),
+            'serialize' => function($value, $entity = null){
+                $key = "hook:cpf:{$entity}";
+                if(!$this->rcache->contains($key)){
+                    /**@var MapasCulturais\App $this */
+                    if($entity->type && $entity->type->id == 1){
+                        $entity->documento = $value;
+                    }
+                    $this->rcache->save($key, 1);
+                }
+                return $value;
+            },
+            'validations' =>  array(
+                'v::cpf()' => \MapasCulturais\i::__('O número de CPF informado é inválido.')
+             ),
+            'available_for_opportunities' => true,
         ),
 
 

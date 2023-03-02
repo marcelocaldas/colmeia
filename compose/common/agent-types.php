@@ -72,7 +72,8 @@ return array(
                 return $value;
             },
             'validations' =>  array(
-                'v::cpf()' => \MapasCulturais\i::__('O número de CPF informado é inválido.')
+                'v::cpf()' => \MapasCulturais\i::__('O número de CPF informado é inválido.'),
+                'required'=>  \MapasCulturais\i::__('O número do CPF é obrigatório.')
              ),
             'available_for_opportunities' => true,
         ),

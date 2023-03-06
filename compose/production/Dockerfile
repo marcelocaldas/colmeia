@@ -18,6 +18,7 @@ COPY compose/common/ppgIdMap.csv /var/www/html/protected/application/plugins/Ald
 COPY compose/common/agent-types.php /var/www/html/protected/application/conf/agent-types.php
 COPY compose/common/location.php /var/www/html/protected/application/conf/location.php
 COPY compose/common/lgpd-terms /var/www/html/protected/application/conf/lgpd-terms
+COPY compose/common/agent-form-1.php /var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-1.php
 
 COPY compose/common/php-ini.d /usr/local/etc/php/conf.d
 

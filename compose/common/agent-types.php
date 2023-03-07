@@ -53,7 +53,8 @@ return array(
                 return $value;
             },
             'validations' => array(
-                'v::cnpj()' => \MapasCulturais\i::__('O número de CNPJ informado é inválido.')
+                'v::cnpj()' => \MapasCulturais\i::__('O número de CNPJ informado é inválido.'),
+                'required' => \MapasCulturais\i::__('O número de CNPJ e obrigatório.'),
              ),
             'available_for_opportunities' => true,
         ),

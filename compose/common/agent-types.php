@@ -17,9 +17,6 @@ return array(
         'documento' => array(
             'private' => true,
             'label' => \MapasCulturais\i::__('CPF ou CNPJ'),
-            'validations' => array(
-                'required' => \MapasCulturais\i::__('CPF ou CNPJ deve ser informado.')
-            ),
             'serialize' => function($value, $entity = null){
                 /**@var MapasCulturais\App $this */
                 $key = "hook:documento:{$entity}";

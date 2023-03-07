@@ -19,6 +19,7 @@ COPY compose/common/agent-types.php /var/www/html/protected/application/conf/age
 COPY compose/common/location.php /var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/location.php
 COPY compose/common/lgpd-terms /var/www/html/protected/application/conf/lgpd-terms
 COPY compose/common/agent-form-1.php /var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-1.php
+COPY compose/common/agent-form-2.php /var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-2.php
 
 COPY compose/common/php-ini.d /usr/local/etc/php/conf.d
 

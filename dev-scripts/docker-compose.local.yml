@@ -30,6 +30,8 @@ services:
       - ../plugins/RegistrationPayments:/var/www/html/protected/application/plugins/RegistrationPayments
       - ../compose/common/lgpd-terms:/var/www/html/protected/application/conf/lgpd-terms
       - ../compose/common/agent-form-1.php:/var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-1.php
+      - ../compose/common/agent-form-2.php:/var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-2.php
+
 
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10

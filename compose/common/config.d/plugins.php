@@ -4,6 +4,20 @@ $config_plugins = [
         'EvaluationMethodTechnical' => ['namespace' => 'EvaluationMethodTechnical'],
         'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
         'EvaluationMethodDocumentary' => ['namespace' => 'EvaluationMethodDocumentary'],
+        'SettingsPa' => [
+            'namespace' => 'SettingsPa',
+            'config' => [
+                'required_fields' => [
+                    'nomeCompleto' => true,
+                    'emailPrivado' => true,
+                    'telefone1' => true,
+                    'En_Estado' => true,
+                    'En_Municipio' => true,
+                    'genero' => true,
+                    'raca' => true
+                ]
+            ]
+        ],
         "LocationPatch" => [
             "namespace" => "LocationPatch",
             "config" => [

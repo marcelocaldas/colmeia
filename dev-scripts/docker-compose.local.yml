@@ -13,7 +13,6 @@ services:
       - ../docker-data/pcache-cron.log:/var/www/scripts/nohup.out
 
       - ../compose/common/config.d:/var/www/html/protected/application/conf/conf-common.d
-      - ../compose/common/agent-types.php:/var/www/html/protected/application/conf/agent-types.php
       - ../compose/common/location.php:/var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/location.php
       - ../compose/local/config.d:/var/www/html/protected/application/conf/config.d
 
@@ -28,6 +27,7 @@ services:
       - ../plugins/AldirBlancValidadorRecurso:/var/www/html/protected/application/plugins/AldirBlancValidadorRecurso
       - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
       - ../plugins/RegistrationPayments:/var/www/html/protected/application/plugins/RegistrationPayments
+      - ../plugins/SettingsPa:/var/www/html/protected/application/plugins/SettingsPa
       - ../compose/common/lgpd-terms:/var/www/html/protected/application/conf/lgpd-terms
       - ../compose/common/agent-form-1.php:/var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-1.php
       - ../compose/common/agent-form-2.php:/var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-2.php

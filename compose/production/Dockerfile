@@ -15,7 +15,6 @@ COPY compose/common/config-cnab240-inciso2.php /var/www/html/protected/applicati
 COPY compose/common/config-import-cnab240.php /var/www/html/protected/application/plugins/AldirBlanc/config-import-cnab240.php
 COPY compose/common/deParaContas.csv /var/www/html/protected/application/plugins/AldirBlanc/CSV/deParaContas.csv
 COPY compose/common/ppgIdMap.csv /var/www/html/protected/application/plugins/AldirBlanc/CSV/ppgIdMap.csv
-COPY compose/common/agent-types.php /var/www/html/protected/application/conf/agent-types.php
 COPY compose/common/location.php /var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/location.php
 COPY compose/common/lgpd-terms /var/www/html/protected/application/conf/lgpd-terms
 COPY compose/common/agent-form-1.php /var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-1.php

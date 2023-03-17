@@ -50,7 +50,7 @@ $canSee = function ($view) use ($entity, $fieldsList) {
                 <!-- Campo Nome Completo -->
                 <p class="privado">
                     <span class="icon icon-private-info"></span>
-                    <span class="label"><?php \MapasCulturais\i::_e("Nome Fantasia");?>:</span>
+                    <span class="label"><?php \MapasCulturais\i::_e("Razão social");?>:</span>
                     <span class="js-editable <?php echo ($entity->isPropertyRequired($entity,"nomeCompleto") && $editEntity? 'required': '');?>" data-edit="nomeCompleto" data-original-title="<?php \MapasCulturais\i::esc_attr_e("Nome Fantasia ou Razão Social");?>" data-emptytext="<?php \MapasCulturais\i::esc_attr_e("Informe o nome fantasia ou razão social");?>">
                         <?php echo $entity->nomeCompleto; ?>
                     </span>
@@ -59,7 +59,7 @@ $canSee = function ($view) use ($entity, $fieldsList) {
                 <p class="privado">
                     <span class="icon icon-private-info"></span>
                     <span class="label"><?php  \MapasCulturais\i::_e("CNPJ");?>:</span>
-                    <span class="js-editable required <?php echo ($entity->isPropertyRequired($entity,"cnpj") && $editEntity? 'required': '');?>" data-edit="cnpj" data-original-title="<?php \MapasCulturais\i::esc_attr_e("CPF");?>" data-emptytext="<?php \MapasCulturais\i::esc_attr_e("Informe seu CNPJ com pontos, hífens e barras");?>">
+                    <span class="js-editable <?php echo ($entity->isPropertyRequired($entity,"cnpj") && $editEntity? 'required': '');?>" data-edit="cnpj" data-original-title="<?php \MapasCulturais\i::esc_attr_e("CPF");?>" data-emptytext="<?php \MapasCulturais\i::esc_attr_e("Informe seu CNPJ com pontos, hífens e barras");?>">
                         <?php echo $entity->cnpj; ?>
                     </span>
                 </p>

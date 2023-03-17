@@ -7,14 +7,17 @@ $config_plugins = [
         'SettingsPa' => [
             'namespace' => 'SettingsPa',
             'config' => [
-                'required_fields' => [
-                    'nomeCompleto' => true,
+                'agent_required_fields' => [
                     'emailPrivado' => true,
                     'telefone1' => true,
                     'En_Estado' => true,
                     'En_Municipio' => true,
+                ],
+                'agent1_required_fields' => [ // Obrigatoriedade dos Campos dos agentes individuais
+                    'nomeCompleto' => true,
                     'genero' => true,
-                    'raca' => true
+                    'cpf' => true,
+                    'raca' => true,
                 ]
             ]
         ],

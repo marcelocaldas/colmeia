@@ -24,14 +24,16 @@ class Plugin extends \MapasCulturais\Plugin
 
         $app->hook("app.register:after", function () use ($self){
             $metadata = $this->getRegisteredMetadata('MapasCulturais\Entities\Agent');
-            foreach($self->config['required_fields'] as $field => $bool){
+            foreach($self->config['agent_required_fields'] as $field => $bool){
                 $metadata[$field]->is_required = $bool;
             }
         }, 10000);
 
-        $app->hook("<<GET|POST|PATCH|PUT>>(agent.<<*>>):before", function () use ($app) {
+        $app->hook("<<GET|POST|PATCH|PUT>>(agent.<<*>>):before", function () use ($app, $self) {
             $metadata = $app->getRegisteredMetadata('MapasCulturais\Entities\Agent',1);
-            $metadata['cpf']->is_required = true;
+            foreach($self->config['agent1_required_fields'] as $field => $bool){
+                $metadata[$field]->is_required = $bool;
+            }
         }, 10000);
     }
 

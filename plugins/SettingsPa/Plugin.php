@@ -22,8 +22,10 @@ class Plugin extends \MapasCulturais\Plugin
             // Texto que aparece na home
             "text_home" => env("HC_TEXT_HOME", ""),
 
-            // Botão de ação que aparece na home
-            "action_home" => env("HC_ACTIONS_HOME", ""),
+            // Texto do botão de ação que aparece na home
+            "action_home_text" => env("HC_TEXT_ACTIONS_HOME", ""),
+
+            "action_home_link" => env("HC_LINK_ACTIONS_HOME", "#"),
         ];
 
         parent::__construct($config);

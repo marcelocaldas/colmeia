@@ -18,7 +18,7 @@
    </div>
     
    <div>
-        <?php if($config['action_home']):?>
+        <?php if($config['action_home_text']):?>
             <?php  $this->part('HomeContent/home-searsh--actions', ["config" => $config]);?>
         <?php endif ?>
    </div>

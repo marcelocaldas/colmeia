@@ -36,6 +36,14 @@ class Plugin extends \MapasCulturais\Plugin
 
         $self = $this;
 
+        /**
+         * Insere conteúdo na HOME
+         */
+        $app->hook('template(site.index.home-search):end', function () use ($self) {
+            /** @var Theme $this */
+            $this->part('HomeContent/home-search', ["config" => $self->config]);
+        });
+
         $app->hook("app.register:after", function () use ($self){
             $metadata = $this->getRegisteredMetadata('MapasCulturais\Entities\Agent');
             foreach($self->config['agent_required_fields'] as $field => $bool){

@@ -18,7 +18,12 @@ $config_plugins = [
                     'genero' => true,
                     'cpf' => true,
                     'raca' => true,
-                ]
+                ],
+                "title_home" => "",
+                "images_home" => ["homeContent/img/edital_539.png"],
+                "text_home" => "",
+                "images_size_home" => "60%",
+                "action_home" => "",
             ]
         ],
         "LocationPatch" => [

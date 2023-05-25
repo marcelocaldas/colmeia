@@ -9,7 +9,21 @@ class Plugin extends \MapasCulturais\Plugin
     function __construct($config = [])
     {
         $config += [
-            'required_fields' => []
+            'required_fields' => [],
+            // Título que aparece na homr
+            "title_home" => env("HC_TEXT_HOME", ""),
+
+            // Imagens que aparece na home. Preencher como um array Ex.: ["homeContent/img/img1.png", "homeContent/img/img2.png"]
+            "images_home" => env("HC_IMAGES_HOME", ""),
+
+            // Tamanho da imagem em percentual %
+            "images_size_home" => env("HC_IMAGES_SIZE_HOME", null),
+
+            // Texto que aparece na home
+            "text_home" => env("HC_TEXT_HOME", ""),
+
+            // Botão de ação que aparece na home
+            "action_home" => env("HC_ACTIONS_HOME", ""),
         ];
 
         parent::__construct($config);

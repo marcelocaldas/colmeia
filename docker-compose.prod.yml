@@ -46,7 +46,7 @@ services:
 #      - APP_LCODE=pt_BR,es_ES # para selecao do idioma baseado no navegador
       - APP_LCODE=pt_BR
       - APP_MODE=production
-      - ACTIVE_THEME=MapasComBr
+      - ACTIVE_THEME=MapasPA
       - PENDING_PCACHE_RECREATION_INTERVAL=60
       
     depends_on:

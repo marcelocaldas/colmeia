@@ -17,7 +17,7 @@ return [
     // 'app.log.apiCache'      => true,
     // 'app.log.apiDql'        => true,
     // 'app.log.assets'        => true,
-
+    'app.log.texts'=>true,
 
     // MAILER -----------------
     // 'mailer.user'       => 'you@gmail.com', 

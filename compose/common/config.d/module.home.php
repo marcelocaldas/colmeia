@@ -8,7 +8,6 @@ return [
         'home-projects' => env('MODULE_HOME_IMAGE_PROJECTS','img/home/home-entities/projects.jpg'),
         'home-spaces' => env('MODULE_HOME_IMAGE_SPACES','img/home/home-entities/spaces.jpg'),
         'home-registers' => env('MODULE_HOME_IMAGE_REGISTERS','img/home/home-register/background.jpg'),
-        
     ]    
 ];
 

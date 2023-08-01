@@ -27,14 +27,6 @@ $config_plugins = [
                 "action_home_link" => 'https://mapacultural.pa.gov.br/oportunidade/539/',
             ]
         ],
-        "LocationPatch" => [
-            "namespace" => "LocationPatch",
-            "config" => [
-                "enable" => env("LOCATION_PATCH_ENABLE", true),
-                "cutoff" => env("LOCATION_PATCH_CUTOFF", "19800101000001"),
-            ],
-        ],
-
         'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
         'AldirBlanc' => [
             'namespace' => 'AldirBlanc',

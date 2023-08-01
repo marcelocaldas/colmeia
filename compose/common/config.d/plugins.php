@@ -1,9 +1,6 @@
 <?php
 $config_plugins = [
     'plugins' => [
-        'EvaluationMethodTechnical' => ['namespace' => 'EvaluationMethodTechnical'],
-        'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
-        'EvaluationMethodDocumentary' => ['namespace' => 'EvaluationMethodDocumentary'],
         'SettingsPa' => [
             'namespace' => 'SettingsPa',
             'config' => [

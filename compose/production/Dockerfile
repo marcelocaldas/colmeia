@@ -1,4 +1,4 @@
-FROM hacklab/mapasculturais:v5.6.19
+FROM hacklab/mapasculturais:redesign
 
 COPY compose/common/config.php /var/www/html/protected/application/conf/config.php
 COPY compose/common/config.d /var/www/html/protected/application/conf/conf-common.d
@@ -21,5 +21,3 @@ COPY compose/common/agent-form-1.php /var/www/html/protected/application/themes/
 COPY compose/common/agent-form-2.php /var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-2.php
 
 COPY compose/common/php-ini.d /usr/local/etc/php/conf.d
-
-RUN curl https://raw.githubusercontent.com/opauth/facebook/master/FacebookStrategy.php > /var/www/html/protected/application/plugins/MultipleLocalAuth/Facebook/FacebookStrategy.php

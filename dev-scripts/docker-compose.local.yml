@@ -17,7 +17,7 @@ services:
       - ../compose/local/config.d:/var/www/html/protected/application/conf/config.d
 
       # themes and plugins
-      - ../themes/MapasComBr:/var/www/html/protected/application/themes/MapasComBr
+      - ../themes/MapasPA:/var/www/html/protected/application/themes/MapasPA
       - ../plugins/AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
       - ../plugins/AldirBlancDataprev:/var/www/html/protected/application/plugins/AldirBlancDataprev
       - ../plugins/AldirBlancPreDataprev:/var/www/html/protected/application/plugins/AldirBlancPreDataprev

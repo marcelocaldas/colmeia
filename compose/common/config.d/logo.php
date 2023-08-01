@@ -2,6 +2,12 @@
 use \MapasCulturais\i;
 
 return [
+    /* Primeira linha do logo configurável */
+    'logo.title' => env('LOGO_TITLE', i::__('Mapa Cultural')),
+
+    /* Segunda linha do logo configurável */
+    'logo.subtitle' => env('LOGO_SUBTITLE', i::__('do Pará')),
+
     /* Cores da logo */
     'logo.colors' => [
         "var(--mc-primary-300)",

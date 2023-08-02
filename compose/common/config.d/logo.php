@@ -3,10 +3,10 @@ use \MapasCulturais\i;
 
 return [
     /* Primeira linha do logo configurável */
-    'logo.title' => env('LOGO_TITLE', i::__('Mapa Cultural')),
+    'logo.title' => env('LOGO_TITLE',''),
 
     /* Segunda linha do logo configurável */
-    'logo.subtitle' => env('LOGO_SUBTITLE', i::__('do Pará')),
+    'logo.subtitle' => env('LOGO_SUBTITLE',''),
 
     /* Cores da logo */
     'logo.colors' => [
@@ -21,7 +21,7 @@ return [
 
     ex: `img/meu-mapa-logo.jpg` (pasta assets/img/meu-mapa-logo.jpg do tema) 
     */
-    'logo.image' => env('LOGO_IMAGE', ''),
+    'logo.image' => env('LOGO_IMAGE', 'img/logo-Mapas-PA.png'),
 
     /* Esconde o título e subtitulo */
     'logo.hideLabel' => env('LOGO_HIDELABEL', false),

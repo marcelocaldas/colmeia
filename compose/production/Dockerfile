@@ -21,3 +21,9 @@ COPY compose/common/agent-form-1.php /var/www/html/protected/application/themes/
 COPY compose/common/agent-form-2.php /var/www/html/protected/application/themes/BaseV1/layouts/parts/singles/agent-form-2.php
 
 COPY compose/common/php-ini.d /usr/local/etc/php/conf.d
+
+WORKDIR /var/www/src
+
+RUN pnpm install --recursive && pnpm run build 
+
+WORKDIR /var/www/html

@@ -27,7 +27,7 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme {
             ]);
         });
 
-        $app->hook('template(site.index.body):after', function(){
+        $app->hook('template(<<*>>.<<*>>.body):after', function(){
             $this->part('tawkto--script');
         });
     }

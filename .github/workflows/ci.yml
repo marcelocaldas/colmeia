@@ -20,7 +20,6 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          submodules: true
           images: |
             docker.io/hacklab/mapas-pa 
           tags: |
@@ -41,7 +40,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
+          
+      - name: Initialize and update submodules
+        run: |
+          git submodule update --init --recursive
+
         name: Build and push
         uses: docker/build-push-action@v4
         with:

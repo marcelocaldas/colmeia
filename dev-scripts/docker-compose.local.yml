@@ -39,6 +39,7 @@ services:
       
       - APP_MODE=development
       - REDIS_CACHE=redis
+      - BUILD_ASSETS=1
     depends_on:
       - db
       - redis

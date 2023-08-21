@@ -1,7 +1,7 @@
 <?php
 $config_plugins = [
-    'Metabase' => [ 'namespace' => 'Metabase' ],
     'plugins' => [
+        'Metabase' => [ 'namespace' => 'Metabase' ],
         'SettingsPa' => [
             'namespace' => 'SettingsPa',
             'config' => [

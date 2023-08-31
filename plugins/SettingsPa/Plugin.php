@@ -85,10 +85,15 @@ class Plugin extends \MapasCulturais\Plugin
         }, 10000);
 
         $app->hook("<<GET|POST|PATCH|PUT>>(agent.<<*>>):before", function () use ($app, $self) {
-            $metadata = $app->getRegisteredMetadata('MapasCulturais\Entities\Agent',1);
-            foreach($self->config['agent1_required_fields'] as $field => $bool){
-                $metadata[$field]->is_required = $bool;
+            $entity = $this->requestedEntity;
+
+            if($entity && $entity->type && $entity->type->id == 1){
+                $metadata = $app->getRegisteredMetadata('MapasCulturais\Entities\Agent');
+                foreach($self->config['agent1_required_fields'] as $field => $bool){
+                    $metadata[$field]->is_required = $bool;
+                }
             }
+           
         }, 10000);
     }
 

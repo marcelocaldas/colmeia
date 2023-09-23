@@ -38,17 +38,14 @@ esac
 done
 
 if [ $BUILD = "1" ]; then
-   docker-compose -f docker-compose.local.yml build
+   docker-compose -f docker-compose.yml build
 fi
 
 if [ $DOWN = "1" ]; then
-   docker-compose -f docker-compose.local.yml down
+   docker-compose -f docker-compose.yml down
 fi
 
-rm -rf ../docker-data/pcache-cron.log
-touch ../docker-data/pcache-cron.log
+docker-compose -f docker-compose.yml run --service-ports  mapas
 
-docker-compose -f docker-compose.local.yml run --service-ports  mapas
-
-docker-compose -f docker-compose.local.yml down
+docker-compose -f docker-compose.yml down
 cd $CDIR

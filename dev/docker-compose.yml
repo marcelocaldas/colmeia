@@ -15,7 +15,7 @@ services:
 
       - ../docker/common/config.d:/var/www/config/common.d
       - ../docker/common/lgpd-terms:/var/www/config/lgpd-terms
-      - ./config.d:/var/www/config/dev.d
+      - ./config.d:/var/www/config/config.d
 
       # themes and plugins
       - ../themes/MapasPA:/var/www/src/themes/MapasPA

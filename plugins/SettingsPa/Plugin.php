@@ -40,6 +40,12 @@ class Plugin extends \MapasCulturais\Plugin
 
         $self = $this;
 
+        $app->hook('template(site.index.main-footer-logo):before', function () use($app) {
+            /** @var \MapasCulturais\Themes\BaseV2\Theme $this */
+
+            $this->part('pa-footer-support');
+        });
+
         $app->hook("registrationFieldTypes.saveToEntity", function($entity_field, $value) use ($app){
             if($entity_field == '@terms:segmento') {
                 $this->terms['segmento'] = $value;

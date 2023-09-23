@@ -24,5 +24,5 @@ return [
     'logo.image' => env('LOGO_IMAGE', 'img/logo-Mapas-PA.png'),
 
     /* Esconde o título e subtitulo */
-    'logo.hideLabel' => env('LOGO_HIDELABEL', false),
+    'logo.hideLabel' => env('LOGO_HIDELABEL', true),
 ];

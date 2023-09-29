@@ -8,4 +8,7 @@ return [
     'themes.active' => "MapasPA",
 
     'app.lcode' => 'pt_BR',
+    'homeHeader.banner' => 'img/banner-caderno-lpg.jpg',
+    'homeHeader.bannerLink' => 'https://mapacultural.pa.gov.br/files/agent/7/caderno-de-orientacoes-pcac-27-09-2023.pdf',
+    'homeHeader.downloadableLink' => true,
 ];

@@ -26,6 +26,8 @@ $list = [
     'lpg/audiovisual-formacao-festivais' => 1122,
     'lpg/audiovisual-salas-de-cinema' => 1120,
     'lpg/audiovisual-cineclubes-e-itinerantes' => 1124,
+
+    'lpg/audiovisual-licenciamento-de-obras-e-apoio' => 1134,
     
 ];
 

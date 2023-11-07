@@ -2,6 +2,7 @@
 $config_plugins = [
     'plugins' => [
         'MultipleLocalAuth',
+        'AdminLoginAsUser',
 
         'MapasBlame' => [
             'namespace' => 'MapasBlame',

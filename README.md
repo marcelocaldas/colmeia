@@ -1,6 +1,6 @@
-# Mapa da Cultura Brasileira (Mapa Cultural do Pará)
+# Rede Ambiental (COLMEIA)
 
-Repositório para deploy do Mapa da Cultura Brasileira
+Repositório para deploy da Rede Colmeia, cópia com adaptações do projeto Mapas Culturais. 
 
 ## Estrutura de arquivos
 - **compose**

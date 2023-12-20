@@ -12,8 +12,8 @@ services:
      - ./docker-data/assets:/var/www/html/assets
 
     ports:
-     - "80:80"
-     - "443:443"
+     - "8080:80"
+     - "8443:443"
     depends_on:
       - mapasculturais
     links:
@@ -69,9 +69,9 @@ services:
     image: postgis/postgis:14-master
     restart: unless-stopped
     environment:
-      - POSTGRES_PASSWORD=mapas
+      - POSTGRES_PASSWORD=
       - POSTGRES_USER=mapas
-      - POSTGRES_DB=mapas
+      - POSTGRES_DB=colmeia
       - POSTGRES_DB_TEST=mapasculturais_test
     volumes:
       - ./db:/docker-entrypoint-initdb.d

@@ -1,6 +1,6 @@
 [submodule "plugins/MultipleLocalAuth"]
 	path = plugins/MultipleLocalAuth
-	url = https://github.com/mapasculturais/plugin-MultipleLocalAuth
+	url = https://github.com/marcelocaldas/MultipleLocalAuth
 [submodule "plugins/MapasBlame"]
 	path = plugins/MapasBlame
 	url = https://github.com/mapasculturais/plugin-MapasBlame

@@ -71,7 +71,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=
       - POSTGRES_USER=mapas
-      - POSTGRES_DB=colmeia
+      - POSTGRES_DB=mapas
       - POSTGRES_DB_TEST=mapasculturais_test
     volumes:
       - ./db:/docker-entrypoint-initdb.d
